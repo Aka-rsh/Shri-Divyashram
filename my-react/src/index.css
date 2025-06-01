@@ -1,0 +1,56 @@
+@import "tailwindcss";
+/* index.css or App.css */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Optional: visual debug */
+body.debug-scroll * {
+  outline: 1px solid red;
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #f59e0b; /* Tailwind yellow-400 */
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.link-underline:hover::after,
+.link-underline.active::after {
+  transform: scaleX(1);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+  scroll-behavior: smooth;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+
