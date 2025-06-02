@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Homee from "./Homee";
 import AboutUs from "./AboutUs";
@@ -47,7 +47,7 @@ function App() {
           }}
         >
           <img
-            src="/Photos/Whatsapp.png"  // <-- Use forward slashes and ensure this path is correct relative to your public folder
+            src="/public/Photos/Whatsapp.png"  
             alt="WhatsApp"
             style={{
               width: "30px",
