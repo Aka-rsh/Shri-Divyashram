@@ -48,7 +48,7 @@ function App() {
           }}
         >
           <img
-            src="/Photos/Whatsapp.png"  // <-- Use forward slashes and ensure this path is correct relative to your public folder
+            src="./Photos/Whatsapp.png"  // <-- Use forward slashes and ensure this path is correct relative to your public folder
             alt="WhatsApp"
             style={{
               width: "30px",

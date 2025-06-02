@@ -6,127 +6,127 @@ import Footer from "./Footer";
 
 const templeData = [
  {
-  imageUrl: "/Varanasi/T1.jpg",
+  imageUrl: "./Varanasi/T1.jpg",
   templeName: "Kashi Vishwanath Mandir",
   location: "Vishwanath Gali, Varanasi",
   description: "One of the 12 Jyotirlingas, dedicated to Lord Shiva, with a golden dome and deep spiritual legacy."
 },
   {
-    imageUrl: "/Varanasi/Durgakund.jpg",
+    imageUrl: "./Varanasi/Durgakund.jpg",
     templeName: "Durga Kund Mandir",
     location: "Durgakund Road, Varanasi",
     description: "18th-century Nagara-style temple dedicated to Goddess Durga, known for its sacred kund and red structure.",
   },
   {
-    imageUrl: "/Varanasi/KaalBhairav.jpg",
+    imageUrl: "./Varanasi/KaalBhairav.jpg",
     templeName: "Kaal Bhairav Mandir",
     location: "Vishweshwarganj, Varanasi",
     description: "Ancient temple of Lord Bhairav, protector of the city, known for skull garlands and fierce energy.",
   },
   {
-    imageUrl: "/Varanasi/Maa-Annapurna.jpg",
+    imageUrl: "./Varanasi/Maa-Annapurna.jpg",
     templeName: "Maa Annapurna Mandir",
     location: "Godowlia, Varanasi",
     description: "Temple of Goddess Annapurna, provider of food and nourishment, featuring brass and gold idols.",
   },
   {
-    imageUrl: "/Varanasi/Sankatmochan.jpg",
+    imageUrl: "./Varanasi/Sankatmochan.jpg",
     templeName: "Sankat Mochan Hanuman Mandir",
     location: "Near Assi Ghat, Varanasi",
     description: "Built by Tulsidas, this Hanuman temple is known for its peaceful ambiance and devotional chants.",
   },
   {
-    imageUrl: "/Varanasi/Nepalitemple.jpeg",
+    imageUrl: "./Varanasi/Nepalitemple.jpeg",
     templeName: "Kanthwala (Nepali) Temple",
     location: "Lalita Ghat, Varanasi",
     description: "19th-century wooden temple modeled after Nepal's Pashupatinath, also called Mini Khajuraho.",
   },
   {
-    imageUrl: "/Varanasi/Vishalakshimandir.jpeg",
+    imageUrl: "./Varanasi/Vishalakshimandir.jpeg",
     templeName: "Vishalakshi Mandir",
     location: "Manikarnika Ghat, Varanasi",
     description: "One of the Shakti Peeths, where Goddess Sati's earring fell; a sacred and powerful shrine.",
   },
   {
-    imageUrl: "/Varanasi/BharatMandir.jpeg",
+    imageUrl: "./Varanasi/BharatMandir.jpeg",
     templeName: "Bharat Mata Mandir",
     location: "Varanasi",
     description: "Unique temple with no deity, featuring a 3D marble map of undivided India; symbol of patriotism.",
   },
   {
-    imageUrl: "/Varanasi/SankataMandir.jpeg",
+    imageUrl: "./Varanasi/SankataMandir.jpeg",
     templeName: "Sankata Devi Mandir",
     location: "Varanasi",
     description: "Goddess Sankata is believed to relieve sorrows; popular among women and during Navratri.",
   },
   {
-    imageUrl: "/Varanasi/LalitaGauritemple.jpg",
+    imageUrl: "./Varanasi/LalitaGauritemple.jpg",
     templeName: "Lalita Gauri Temple",
     location: "Near Lalita Ghat, Varanasi",
     description: "19th-century temple of wealth and prosperity built by Nepalese king near Nepali temple.",
   },
   {
-    imageUrl: "/Varanasi/Manasmandir.jpeg",
+    imageUrl: "./Varanasi/Manasmandir.jpeg",
     templeName: "Tulsi Manas Temple",
     location: "Sankat Mochan Road, Varanasi",
     description: "White marble temple where Tulsidas wrote Ramcharitmanas; walls feature verses and epics.",
   },
   {
-    imageUrl: "/Varanasi/Mitrunjaymandir.jpeg",
+    imageUrl: "./Varanasi/Mitrunjaymandir.jpeg",
     templeName: "Mrityunjay Mahadev Temple",
     location: "Daranagar, Varanasi",
     description: "Shiva temple believed to protect from untimely death; contains a healing well.",
   },
   {
-    imageUrl: "/Varanasi/TilbhandeshwarMahadev.jpeg",
+    imageUrl: "./Varanasi/TilbhandeshwarMahadev.jpeg",
     templeName: "Tilbhandeshwar Mahadev Mandir",
     location: "Varanasi",
     description: "Naturally growing Shiva linga worshipped with both Malayali and Benarasi rituals.",
   },
   {
-    imageUrl: "/Varanasi/BhuVT.jpeg",
+    imageUrl: "./Varanasi/BhuVT.jpeg",
     templeName: "New Vishwanath Temple (BHU)",
     location: "BHU Campus, Varanasi",
     description: "Marble replica of the original temple, built by Birla family, open to all castes and religions.",
   },
   {
-    imageUrl: "/Varanasi/Dundi Raj Ganesh Temple.jpeg",
+    imageUrl: "./Varanasi/Dundi Raj Ganesh Temple.jpeg",
     templeName: "Dundi Raj Ganesh Temple",
     location: "Near Kashi Vishwanath, Varanasi",
     description: "Oldest Ganesh temple in the city, believed to remove sorrows and grant blessings.",
   },
   {
-    imageUrl: "/Varanasi/ISKCONTemple.jpeg",
+    imageUrl: "./Varanasi/ISKCONTemple.jpeg",
     templeName: "ISKCON Temple",
     location: "Near BHU, Varanasi",
     description: "Marble temple of Lord Krishna known for Sunday feasts, kirtans, and spiritual gatherings.",
   },
   {
-    imageUrl: "/Varanasi/RatneshwarMahadevTemple.jpeg",
+    imageUrl: "./Varanasi/RatneshwarMahadevTemple.jpeg",
     templeName: "Ratneshwar Mahadev Temple",
     location: "Scindia Ghat, Varanasi",
     description: "Half-submerged temple believed to grant male offspring, best viewed from the river.",
   },
   {
-    imageUrl: "/Varanasi/VyasaTemple.jpeg",
+    imageUrl: "./Varanasi/VyasaTemple.jpeg",
     templeName: "Vyasa Temple",
     location: "Eastern bank of Ganga, Varanasi",
     description: "Dedicated to sage Vyasa who wrote Mahabharata; located outside the main city per legend.",
   },
   {
-  imageUrl: "/Varanasi/BadaGaneshMandir.jpeg",
+  imageUrl: "./Varanasi/BadaGaneshMandir.jpeg",
   templeName: "Bada Ganesh Mandir",
   location: "Lohatiya, Varanasi",
   description: "Home to the rare Swambhu Trinetra idol of Lord Ganesha, worshipped for removing obstacles and fulfilling wishes, especially on Ganesh Chaturthi.",
   },
   {
-    imageUrl: "/Varanasi/MarkandeyMahadevTemple.jpeg",
+    imageUrl: "./Varanasi/MarkandeyMahadevTemple.jpeg",
     templeName: "Markandey Mahadev Temple",
     location: "Kaithi, Varanasi",
     description: "Temple where Lord Shiva saved a boy from death; popular during Mahashivratri.",
   },
   {
-    imageUrl: "/Varanasi/TridevTemple.jpeg",
+    imageUrl: "./Varanasi/TridevTemple.jpeg",
     templeName: "Tridev Temple",
     location: "Near Tulsi Manas Temple, Varanasi",
     description: "Modern temple dedicated to Hanuman, Khatu Shyam, and Rani Sati Dadi; photography allowed.",
@@ -228,7 +228,7 @@ const KashiDarshan = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/Darshan/vns-vd2.mp4" type="video/mp4" />
+          <source src="./Darshan/vns-vd2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute bottom-4 left-4 text-white text-xs">

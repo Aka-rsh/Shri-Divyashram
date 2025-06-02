@@ -9,20 +9,20 @@ const servicesData = [
   {
     title: "काशी दर्शन",
     description: "पवित्र नगरी काशी की यात्रा करें — जहाँ मंदिरों की घंटियां, गंगा की आरती और अध्यात्म की शांति आपका स्वागत करती हैं।",
-    imageUrl: "/Darshan/Kashi-Darshan.png",
+    imageUrl: "./Darshan/Kashi-Darshan.png",
     linkTo: "/KashiDarshan",
   },
   
   {
   title: "गौ सेवा",
   description: "गौ माता की सेवा करें — करुणा, धर्म और समर्पण का प्रतीक। आपके सहयोग से गोशालाओं में पोषण और देखभाल सुनिश्चित होती है।",
-  imageUrl: "/Darshan/G.jpg", 
+  imageUrl: "./Darshan/G.jpg", 
   linkTo: "/Goseva",
   },
   {
   title: "गुरुकुल",
   description: "प्राचीन भारतीय शिक्षा प्रणाली का पुनर्जागरण — जहाँ ज्ञान, संस्कार और जीवन मूल्यों की शिक्षा मिलती है। गुरुकुल में आपका योगदान बच्चों के उज्ज्वल भविष्य की नींव रखता है।",
-  imageUrl: "/Darshan/Gurukul.png", 
+  imageUrl: "./Darshan/Gurukul.png", 
   linkTo: "/Gurukul",
   }
   // Add more services here...

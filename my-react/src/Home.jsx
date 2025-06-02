@@ -4,11 +4,11 @@ import Footer from "./Footer";
 
 const Home = () => {
   const images = [
-    "/Photos/p1.png",
-    "/Photos/p8.jpg",
-    "/Photos/p4.png",
-    "/Photos/p3.png",
-    "/Photos/p6.jpg"
+    "./Photos/p1.png",
+    "./Photos/p8.jpg",
+    "./Photos/p4.png",
+    "./Photos/p3.png",
+    "./Photos/p6.jpg"
   ];
   const [activeDot, setActiveDot] = useState(0);
 

@@ -51,7 +51,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <div className="bg-gradient-to-r from-black to-orange-600 flex items-center justify-between px-8 py-2">
         <Link to="/">
-          <img src="/logo.png" alt="Divyaashram Logo" className="h-24" />
+          <img src="./logo.png" alt="Divyaashram Logo" className="h-24" />
         </Link>
 
         <button

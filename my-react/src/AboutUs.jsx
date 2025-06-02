@@ -7,7 +7,7 @@ const Aboutus = () => {
   const teamMembers = [
 {
   name: "SHRI VIRENDRA KUMAR",
-  image: "/Profiles/Virendra Srivastava.jpg",
+  image: "./Profiles/Virendra-Srivastava.jpg",
   position: "President",
   shortDescription:
     "Shri Virendra Kumar Srivastava, born on September 2, 1976, is a highly accomplished professional with a strong academic background in business, commerce, journalism, and finance. He holds an MBA from UPTU (UP College, Varanasi), an M.Com and PG Diploma in Financial Management from Purvanchal University, and an MJMC from Sanskrit University, Varanasi (2025). A native of Varanasi, he combines deep academic insight with extensive experience in administration and leadership. He also holds computer certifications from Jetking Varanasi and other reputed institutions.",
@@ -48,7 +48,7 @@ const Aboutus = () => {
 
 {
   name: "SHRI SANJAY KESHARI",
-  image: "/Profiles/Sanjay Keshari.jpg",
+  image: "./Profiles/Sanjay-Keshari.jpg",            
   position: "Secretary",
   shortDescription:
     "Shri Sanjay Keshari is a respected entrepreneur and academic with a Master's degree in Commerce (M.Com) from Purvanchal University, Jaunpur, Uttar Pradesh (1997). He has also completed a Swift Computer Course from Computer Bureau, Varanasi, in 1999. Known for his business acumen and leadership, he has earned a reputation as a distinguished and reputable businessman.",
@@ -76,7 +76,7 @@ const Aboutus = () => {
 },
     {
   name: "SHRI SIDHARTHA PANDEY",
-  image: "/Profiles/Sidhartha Pandey.jpg",
+  image: "./Profiles/Sidhartha-Pandey.jpg",
   position: "Treasurer",
   shortDescription:
     "Shri Sidhartha Pandey, born on September 18, 1974, is a highly accomplished professional with a strong academic background in law, commerce, journalism, and finance. He holds an LLB and M.Com from Purvanchal University. A native of Varanasi, he combines deep academic insight with extensive experience in administration and leadership.",
@@ -106,7 +106,7 @@ const Aboutus = () => {
 },
     {
   name: "SHRI AJAY KUSHWAHA",
-  image: "/Profiles/Ajay Kushwaha.jpg",
+  image: "./Profiles/Ajay-Kushwaha.jpg",
   position: "Vice President",
   shortDescription:
     "Shri Ajay is a highly skilled finance professional with a strong background in business management and commerce. He holds an MBA from UPTU, Lucknow and an M.Com from Purvanchal University, Jaunpur. With over two decades of experience, he currently serves as the Finance Head at a multinational company in India. Additionally, Ajay has been deeply involved in spiritual and social work, actively contributing to various organizations across India.",
@@ -149,7 +149,7 @@ const Aboutus = () => {
 },
     {
   name: "MRS. MEENA SINGH",
-  image: "./Profiles/Meena Singh.jpg",
+  image: "./Profiles/Meena-Singh.jpg",
   position: "Director – Human Resources",
   shortDescription:
     "Mrs. Meena Singh is a dynamic and results-driven HR leader with over two decades of experience in executing transformative HR strategies aligned with business goals. She is known for driving organizational effectiveness and optimizing talent acquisition, employee engagement, and HR operations across sectors like FMCG, Telecom, BFSI, and Defence.",
@@ -194,7 +194,7 @@ const Aboutus = () => {
 },
     {
   name: "MRS. POOJA SRIVASTAVA",
-  image: "./Profiles/Pooja Srivastava.jpg",
+  image: "./Profiles/Pooja-Srivastava.jpg",
   position: "Advisor",
   shortDescription:
     "Mrs. Pooja Srivastava is a highly accomplished professional with a strong academic foundation in business, commerce, and finance. A native of Varanasi, she holds an M.Com and MBA, combining academic excellence with real-world experience as an entrepreneur and advisor. She also possesses certifications in computer applications from reputed institutions.",
