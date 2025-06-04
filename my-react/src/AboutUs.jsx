@@ -147,6 +147,7 @@ const Aboutus = () => {
     </p>
   `,
 },
+
     {
   name: "MRS. MEENA SINGH",
   image: "./Profiles/Meena-Singh.jpg",
@@ -225,6 +226,46 @@ const Aboutus = () => {
     </p>
   `
 },
+{
+  name: "Shri Arvind Keshari",
+  image: "./Profiles/Shri-Arvind-Keshari.jpg",
+  position: "Senior Patron",
+  shortDescription:
+    "Shri Arvind Keshari, born on September 12, 1970, is a BAMS medical graduate and a deeply committed social worker and community leader from Varanasi. With decades of experience in social service, healthcare outreach, and cultural nationalism, he continues to make a significant impact through various respected organizations affiliated with the R.S.S. and B.J.P.",
+
+  fullDescription: `
+    <p>🔷 <strong>Full Biography</strong></p>
+    <p>
+      Shri Arvind Keshari, born on September 12, 1970, is a respected social activist and community leader from Varanasi, Uttar Pradesh. He currently resides at B 38/1-K, Plot No. 8, Birdopur, Mahmoorganj, Varanasi – 221010.
+    </p>
+
+    <p><strong>🎓 Educational Background</strong></p>
+    <ul>
+      <li>BAMS (Bachelor of Ayurvedic Medicine & Surgery) Graduate</li>
+    </ul>
+
+    <p><strong>💼 Professional Background</strong></p>
+    <ul>
+      <li>Currently engaged in business while actively involved in community service initiatives</li>
+    </ul>
+
+    <p><strong>🌟 Community & Social Service</strong></p>
+    <ul>
+      <li>Active <strong>Swayamsevak of Rashtriya Swayamsevak Sangh (R.S.S.)</strong> since 1984</li>
+      <li>Serving as <strong>Rashtriya Mahamantri</strong> of Bharat Tibbat Samanvay Sangh (an R.S.S.-affiliated organization)</li>
+      <li>Active Member of <strong>Bharatiya Janata Party (B.J.P.), Varanasi</strong> for the past 25 years</li>
+      <li>Senior Member of <strong>Bharat Vikas Parishad</strong> (20+ years of service)</li>
+      <li>Associated with <strong>SAKSHAM</strong> (R.S.S. initiative supporting differently-abled) for over 10 years</li>
+      <li>Organizer of multiple <strong>Medical and Health Check-up Camps</strong> in rural Varanasi and surrounding areas</li>
+      <li>Supporter of <strong>primary education programs</strong> for economically weaker children in the district</li>
+    </ul>
+
+    <p>
+      Shri Arvind Keshari is a living example of selfless service and cultural commitment. He continues to empower grassroots efforts while promoting traditional Indian values through healthcare, education, and volunteerism.
+    </p>
+  `,
+}
+
   ];
 
   const TeamCard = ({ member }) => {

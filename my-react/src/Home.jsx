@@ -32,9 +32,11 @@ return (
       className="relative h-full w-full bg-cover bg-center flex items-center justify-center transition-all duration-500"
       style={{ backgroundImage: `url(${images[activeDot]})` }}
     >
-      <h1 className="text-white text-4xl md:text-5xl font-bold text-center drop-shadow-lg px-4">
-        Welcome to श्री दिव्याश्रम
-      </h1>
+<h1 className="text-white text-[60px] md:text-[80px] font-bold drop-shadow-lg px-4 text-center">
+  Welcome to <br />
+  श्री <br />
+  दिव्याश्रम
+</h1>
 
       {/* Dots navigation */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex gap-3">

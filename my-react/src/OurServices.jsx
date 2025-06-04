@@ -35,11 +35,11 @@ const OurServices = () => {
       <Home />
 
       {/* Main Heading */}
-      <h1 className="text-5xl font-extrabold text-center text-yellow-900 mt-12">
-        Pilgrims
+      <h1 className="text-5xl font-extrabold text-center text-yellow-900 mt-12 underline decoration-yellow-900">
+        सेवाओं का संगम
       </h1>
       <h2 className="text-3xl sm:text-4xl font-semibold text-center text-yellow-800 mt-6 mb-8">
-        Welcome to Divine Yatra
+        Welcome to Divine Yatra – Explore Pilgrimage, Seva & Learning
       </h2>
 
       {/* Render all services dynamically */}

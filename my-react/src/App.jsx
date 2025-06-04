@@ -1,10 +1,10 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-
 import Navbar from "./Navbar";
 import Homee from "./Homee";
 import AboutUs from "./AboutUs";
 import OurServices from "./OurServices";
+import HotelBooking from "./HotelBooking";
 import KashiDarshan from "./KashiDarshan";
 import Mandir from "./Mandir";
 import ContactUs from "./ContactUs";
@@ -18,6 +18,7 @@ function App() {
           <Route path="/Homee" element={<Homee />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/OurServices" element={<OurServices />} />
+          <Route path="/HotelBooking" element={<HotelBooking/>} />
           <Route path="/KashiDarshan" element={<KashiDarshan />} />
           <Route path="/Mandir" element={<Mandir />} />
           <Route path="/ContactUs" element={<ContactUs />} />

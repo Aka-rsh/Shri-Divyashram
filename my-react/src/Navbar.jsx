@@ -24,7 +24,7 @@ const Navbar = () => {
       text: "OurServices",
       path: "/OurServices",
       children: [
-        { text: "🏨 Hotel Booking", path: "/hotel-booking" },
+        { text: "🏨 Hotel Booking", path: "/HotelBooking" },
         { text: "🚖 Cab Booking", path: "/cab-booking" },
         { text: "🧳 Tour Packages", path: "/tour-packages" },
         { text: "🛕 VIP Darshan Ticket", path: "/vip-darshan" },
@@ -32,22 +32,13 @@ const Navbar = () => {
         { text: "🚉 Train Ticket", path: "/train-ticket" },
       ],
     },
-    { icon: <FaPhoneAlt />, text: "Contact Us", path: "/ContactUs" },
     { icon: <FaLock />, text: "Mandir", path: "/Mandir" },
     { icon: <FaFileSignature />, text: "Book Now", path: "/booknow" },
+    { icon: <FaPhoneAlt />, text: "Contact Us", path: "/ContactUs" },
   ];
 
   return (
     <>
-      {/* Top Info Bar */}
-      <header className="bg-gradient-to-r from-[#FFB22C] to-[#F3C623] text-white text-sm py-2">
-        <ul className="flex flex-wrap justify-center gap-4 px-4 text-center">
-          <li><b>HelpLine: +91 7007094655</b></li>
-          <li><b>24x7 Support: +91 7007094655</b></li>
-          <li><b>WhatsApp: +91 7007094655</b></li>
-        </ul>
-      </header>
-
       {/* Main Navbar */}
       <div className="bg-gradient-to-r from-black to-orange-600 flex items-center justify-between px-8 py-2">
         <Link to="/">
@@ -140,7 +131,7 @@ const Navbar = () => {
             }}
           >
             <FaChevronDown
-              className={`transition-transform duration-300 ${
+              className={`transition-transform duration-00 ${
                 openServiceDropdown ? "rotate-180" : ""
               }`}
             />
