@@ -227,16 +227,16 @@ const Aboutus = () => {
   `
 },
 {
-  name: "Shri Arvind Keshari",
-  image: "./Profiles/Shri-Arvind-Keshari.jpg",
-  position: "Senior Patron",
+  name: "Dr. Arvind Keshari",
+  image: "./Profiles/Dr-Arvind-keshari .jpg",
+  position: "Senior Advisor",
   shortDescription:
-    "Shri Arvind Keshari, born on September 12, 1970, is a BAMS medical graduate and a deeply committed social worker and community leader from Varanasi. With decades of experience in social service, healthcare outreach, and cultural nationalism, he continues to make a significant impact through various respected organizations affiliated with the R.S.S. and B.J.P.",
+    "Dr. Arvind Keshari, born on September 12, 1970, is a BAMS medical graduate and a well-renowned social welfare activist and community leader from Varanasi. With decades of hands-on experience in healthcare outreach, education, and grassroots development, he has dedicated his life to uplifting underserved communities through various civic and humanitarian initiatives.",
 
   fullDescription: `
     <p>🔷 <strong>Full Biography</strong></p>
     <p>
-      Shri Arvind Keshari, born on September 12, 1970, is a respected social activist and community leader from Varanasi, Uttar Pradesh. He currently resides at B 38/1-K, Plot No. 8, Birdopur, Mahmoorganj, Varanasi – 221010.
+      Dr. Arvind Keshari, born on September 12, 1970, is a well-renowned social activist and community leader from Varanasi, Uttar Pradesh. He currently resides at B 38/1-K, Plot No. 8, Birdopur, Mahmoorganj, Varanasi – 221010.
     </p>
 
     <p><strong>🎓 Educational Background</strong></p>
@@ -251,79 +251,88 @@ const Aboutus = () => {
 
     <p><strong>🌟 Community & Social Service</strong></p>
     <ul>
-      <li>Active <strong>Swayamsevak of Rashtriya Swayamsevak Sangh (R.S.S.)</strong> since 1984</li>
-      <li>Serving as <strong>Rashtriya Mahamantri</strong> of Bharat Tibbat Samanvay Sangh (an R.S.S.-affiliated organization)</li>
-      <li>Active Member of <strong>Bharatiya Janata Party (B.J.P.), Varanasi</strong> for the past 25 years</li>
-      <li>Senior Member of <strong>Bharat Vikas Parishad</strong> (20+ years of service)</li>
-      <li>Associated with <strong>SAKSHAM</strong> (R.S.S. initiative supporting differently-abled) for over 10 years</li>
-      <li>Organizer of multiple <strong>Medical and Health Check-up Camps</strong> in rural Varanasi and surrounding areas</li>
-      <li>Supporter of <strong>primary education programs</strong> for economically weaker children in the district</li>
+      <li>Over three decades of involvement in social welfare and volunteer work</li>
+      <li>Senior member of several nationally recognized cultural and humanitarian organizations</li>
+      <li>Organizer of numerous <strong>medical and health check-up camps</strong> in rural and underserved areas</li>
+      <li>Strong advocate for <strong>primary education and child welfare</strong> in low-income communities</li>
+      <li>Promoter of inclusive development programs, especially in the field of health and education</li>
+      <li>Supporter of initiatives empowering the differently-abled and marginalized groups</li>
     </ul>
 
     <p>
-      Shri Arvind Keshari is a living example of selfless service and cultural commitment. He continues to empower grassroots efforts while promoting traditional Indian values through healthcare, education, and volunteerism.
+      Widely regarded as a well-renowned figure in grassroots leadership, Dr. Arvind Keshari is known for his unwavering commitment to service and social upliftment. He continues to inspire meaningful change through his work in healthcare, education, and community empowerment.
     </p>
   `,
-}
+},
 
   ];
 
-  const TeamCard = ({ member }) => {
-    const [expanded, setExpanded] = useState(false);
 
-    return (
-      <div
-        className={`bg-[#C4E1E6] rounded-xl shadow-md p-6 flex flex-col items-center transition-all duration-300 ${
-          expanded ? "scale-[1.01]" : "hover:scale-105"
-        }`}
-      >
-        <img
-          src={member.image}
-          alt={member.name}
-          className="w-40 h-40 rounded-full object-cover shadow-md mb-4"
+const TeamCard = ({ member }) => {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-6 mb-10 border border-gray-700">
+      <div className="flex flex-col lg:flex-row items-center gap-6">
+        {/* Profile Image */}
+        <div className="w-50 h-50 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0">
+  <img
+    src={member.image}
+    alt={member.name}
+    className="w-full h-full object-cover rounded-full border border-gray-300 shadow-md"
+  />
+</div>
+
+
+
+        {/* Basic Info */}
+        <div className="flex-1">
+          <h3 className="text-2xl font-bold text-gray-800">{member.name}</h3>
+          <p className="text-lg font-semibold text-blue-700 mt-1">{member.position}</p>
+          <p className="text-gray-700 mt-3">{member.shortDescription}</p>
+        </div>
+      </div>
+
+      {/* Full Description (Expandable) */}
+      {expanded && (
+        <div
+          className="mt-6 text-gray-800 prose prose-blue max-w-none"
+          dangerouslySetInnerHTML={{ __html: member.fullDescription }}
         />
-        <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
-        <p className="text-sm font-medium text-gray-500 mb-3">
-          {member.position}
-        </p>
-        <p className="text-sm text-gray-600 text-center">
-          {member.shortDescription}
-        </p>
+      )}
 
-        {expanded && (
-          <div
-            className="bg-gray-50 border border-gray-200 rounded-md p-4 text-left text-sm mt-4 w-full"
-            dangerouslySetInnerHTML={{ __html: member.fullDescription }}
-          />
-        )}
-
+      {/* Toggle Button */}
+      <div className="mt-4 text-right">
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-4 px-4 py-2 text-sm rounded-md bg-gray-800 text-white hover:bg-gray-700 transition"
+          className="text-blue-600 font-medium hover:underline cursor-pointer"
         >
           {expanded ? "View Less" : "View More"}
         </button>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-    return (
-    <div className="aboutus-page">
-      {/* Home component above */}
-      <Navbar></Navbar>
-      <Home />
 
-      {/* Leadership team section */}
-      <section className="py-16 px-6 bg-gray-100">
-        <h2 className="text-3xl font-bold text-center mb-12">Meet Our Leadership Team</h2>
-        <div className="flex flex-wrap justify-center gap-6">
+return (
+    <div className="bg-gray-50 min-h-screen flex flex-col">
+      {/* Navbar */}
+      <Navbar />
+
+      {/* Main Content */}
+      <main className="flex-grow py-12 px-4 sm:px-6 lg:px-12">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          Our Leadership Team
+        </h2>
+        <div className="max-w-6xl mx-auto">
           {teamMembers.map((member, index) => (
-            <TeamCard key={index} member={member} />
+            <TeamCard member={member} key={index} />
           ))}
         </div>
-      </section>
+      </main>
 
-      {/* Footer at the end */}
+      {/* Footer */}
       <Footer />
     </div>
   );

@@ -3,48 +3,48 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
 
-const services = [
-  {
-    icon: "fa-solid fa-hotel",
-    title: "Hotel Booking",
-    desc: "Comfortable hotel stays close to temples and ghats.",
-  },
-  {
-    icon: "fa-solid fa-taxi",
-    title: "Airport Pickup and Drop",
-    desc: "Reliable airport and station transfers across Varanasi.",
-  },
-  {
-    icon: "fa-solid fa-route",
-    title: "Tour Packages",
-    desc: "Customizable packages covering top Kashi attractions.",
-  },
-  {
-    icon: "fa-solid fa-ticket",
-    title: "VIP Darshan Ticket",
-    desc: "Skip the lines and get premium darshan access.",
-  },
-  {
-    icon: "fa-solid fa-fire",
-    title: "Ganga Aarti Ticket",
-    desc: "Reserved seating for the spiritual Ganga Aarti experience.",
-  },
-  {
-    icon: "fa-solid fa-ship",
-    title: "Boat Booking",
-    desc: "Sunrise and evening boat rides on the holy Ganga.",
-  },
-  {
-    icon: "fa-solid fa-plane-departure",
-    title: "Flight Ticket",
-    desc: "Domestic and international ticket booking support.",
-  },
-  {
-    icon: "fa-solid fa-train-subway",
-    title: "Train Ticket",
-    desc: "Book train tickets for all major routes and schedules.",
-  },
-];
+// const services = [
+//   {
+//     icon: "fa-solid fa-hotel",
+//     title: "Hotel Booking",
+//     desc: "Comfortable hotel stays close to temples and ghats.",
+//   },
+//   {
+//     icon: "fa-solid fa-taxi",
+//     title: "Airport Pickup and Drop",
+//     desc: "Reliable airport and station transfers across Varanasi.",
+//   },
+//   {
+//     icon: "fa-solid fa-route",
+//     title: "Tour Packages",
+//     desc: "Customizable packages covering top Kashi attractions.",
+//   },
+//   {
+//     icon: "fa-solid fa-ticket",
+//     title: "VIP Darshan Ticket",
+//     desc: "Skip the lines and get premium darshan access.",
+//   },
+//   {
+//     icon: "fa-solid fa-fire",
+//     title: "Ganga Aarti Ticket",
+//     desc: "Reserved seating for the spiritual Ganga Aarti experience.",
+//   },
+//   {
+//     icon: "fa-solid fa-ship",
+//     title: "Boat Booking",
+//     desc: "Sunrise and evening boat rides on the holy Ganga.",
+//   },
+//   {
+//     icon: "fa-solid fa-plane-departure",
+//     title: "Flight Ticket",
+//     desc: "Domestic and international ticket booking support.",
+//   },
+//   {
+//     icon: "fa-solid fa-train-subway",
+//     title: "Train Ticket",
+//     desc: "Book train tickets for all major routes and schedules.",
+//   },
+// ];
 
 const Homee = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -182,6 +182,57 @@ const Homee = () => {
         </section>
       </div>
 
+      {/* Service Section */}
+<div className="flex flex-col justify-center bg-[#A7C1A8] w-full py-12 px-4 mb-8">
+  <h1 className="text-4xl text-center underline underline-offset-8 decoration-black mb-10 font-bold tracking-wide">
+    Services
+  </h1>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+    
+    {/* Service Card 1 */}
+    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+      <h1 className="bg-[#D1D8BE] text-2xl text-center">VIP Tickets</h1>
+      <img
+        src="./Photos/p2.jpg"
+        alt="Service Two"
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    {/* Service Card 2 (Image Example) */}
+    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+      <h1 className="bg-[#D1D8BE] text-2xl text-center">Hotels</h1>
+      <img
+        src="./Photos/p7.jpg"
+        alt="Service Two"
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    {/* Service Card 3 */}
+    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+      <h1 className="bg-[#D1D8BE] text-2xl text-center">Boating</h1>
+      <img
+        src="./Photos/v1.jpg"
+        alt="Service Two"
+        className="object-cover w-full h-full"
+      />
+    </div>
+
+    {/* Service Card 4 */}
+    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+      <h1 className="bg-[#D1D8BE] text-2xl text-center">Cab Booking</h1>
+      <img
+        src="./public/Photos/cabbooking.png"
+        alt="Service Two"
+        className="object-cover w-full h-full"
+      />
+    </div>
+  </div>
+</div>
+
+
 {/* Why Choose Us Section */}
 <div className="bg-amber-100 grid grid-cols-1 md:grid-cols-2 gap-6 p-6 rounded-lg shadow-md mb-8">
 
@@ -267,39 +318,6 @@ const Homee = () => {
 </div>
 
 
-
-{/* Services Carousel */}
-<div className="bg-amber-300 px-2 sm:px-4 py-10 mb-4">
-  <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-    Our Services
-  </h2>
-  <div
-    ref={scrollRef}
-    className="flex overflow-x-auto space-x-4 scrollbar-hide scroll-smooth snap-x snap-mandatory px-1"
-  >
-    {services.map(({ icon, title, desc }, index) => (
-      <div
-        key={index}
-        className="bg-white rounded-xl shadow-md p-4 flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-80 snap-start hover:shadow-lg transition-all relative"
-      >
-        {/* Plus symbol in top-right corner of each box */}
-        <a
-          href="/new-page" // Replace with your actual new page URL or route
-          className="absolute top-2 right-2 text-xl font-bold text-gray-800 hover:text-gray-600 cursor-pointer"
-          aria-label={`Open new page for ${title}`}
-        >
-          +
-        </a>
-
-        <div className="text-3xl text-amber-500 mb-3">
-          <i className={icon}></i>
-        </div>
-        <h3 className="text-lg font-semibold mb-1">{title}</h3>
-        <p className="text-sm text-gray-700">{desc}</p>
-      </div>
-    ))}
-  </div>
-</div>
 
 {/* Join Our Community Section */}
 <div className="bg-yellow-200 rounded-lg shadow-md p-6 md:p-8 mb-8 mx-4 md:mx-auto max-w-5xl overflow-x-hidden">

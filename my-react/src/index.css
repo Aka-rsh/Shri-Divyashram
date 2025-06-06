@@ -7,7 +7,9 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal scroll */
   width: 100%;
   box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
 }
+
 
 *, *::before, *::after {
   box-sizing: inherit;

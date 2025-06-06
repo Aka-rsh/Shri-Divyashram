@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { icon: <FaHome />, text: "Home", path: "/Homee" },
-    { icon: <FaUsers />, text: "About Us", path: "/aboutus" },
+    { text: "Tours", path: "/tours" },
     {
       icon: <FaHandHoldingHeart />,
       text: "OurServices",
@@ -26,14 +26,14 @@ const Navbar = () => {
       children: [
         { text: "🏨 Hotel Booking", path: "/HotelBooking" },
         { text: "🚖 Cab Booking", path: "/cab-booking" },
-        { text: "🧳 Tour Packages", path: "/tour-packages" },
         { text: "🛕 VIP Darshan Ticket", path: "/vip-darshan" },
         { text: "✈ Flight Ticket", path: "/flight-ticket" },
         { text: "🚉 Train Ticket", path: "/train-ticket" },
       ],
     },
     { icon: <FaLock />, text: "Mandir", path: "/Mandir" },
-    { icon: <FaFileSignature />, text: "Book Now", path: "/booknow" },
+    { icon: <FaFileSignature />, text: "Blogs", path: "/blog" },
+    { icon: <FaUsers />, text: "About Us", path: "/aboutus" },
     { icon: <FaPhoneAlt />, text: "Contact Us", path: "/ContactUs" },
   ];
 

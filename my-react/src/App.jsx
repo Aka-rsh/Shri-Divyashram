@@ -2,6 +2,10 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Homee from "./Homee";
+import Tours from "./Tours";
+import SubeheBanaras from "./SubeheBanaras";
+import TempleVisit from "./TempleVisit";
+import Sarnath from "./Sarnath";
 import AboutUs from "./AboutUs";
 import OurServices from "./OurServices";
 import HotelBooking from "./HotelBooking";
@@ -9,13 +13,18 @@ import KashiDarshan from "./KashiDarshan";
 import Mandir from "./Mandir";
 import ContactUs from "./ContactUs";
 
+
 function App() {
   return (
     <Router>
-      <div className="min-h-screen font-inter">
+      <div className="min-h-screen font-inter ">
         <Routes>
           <Route path="/" element={<Homee />} /> {/* 👈 Default landing page */}
           <Route path="/Homee" element={<Homee />} />
+          <Route path="/tours" element={<Tours />} />
+          <Route path="/tours/Subeh-e-Banaras" element={<SubeheBanaras />} />
+          <Route path="/tours/Temple-Visit" element={<TempleVisit />} />
+          <Route path="/tours/Sarnath" element={<Sarnath />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/OurServices" element={<OurServices />} />
           <Route path="/HotelBooking" element={<HotelBooking/>} />
