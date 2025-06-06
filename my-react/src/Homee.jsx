@@ -224,7 +224,7 @@ const Homee = () => {
     <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
       <h1 className="bg-[#D1D8BE] text-2xl text-center">Cab Booking</h1>
       <img
-        src="./public/Photos/cabbooking.png"
+        src="./Photos/cabbooking.png"
         alt="Service Two"
         className="object-cover w-full h-full"
       />
