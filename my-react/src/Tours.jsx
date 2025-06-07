@@ -42,7 +42,7 @@ const Tours = () => {
                 <img
                   src="./Varanasi/KashiVishwanathNight.jpg"
                   alt="Kashi Vishwanath Temple"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover" 
                 />
               </div>
               <div className="p-4">
