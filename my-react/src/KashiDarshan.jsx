@@ -258,9 +258,9 @@ const KashiDarshan = () => {
         key={index}
         className="bg-white rounded-xl shadow-md p-4 flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-80 snap-start hover:shadow-lg transition-all relative"
       >
-        {/* Plus symbol in top-right corner of each box */}
+        {/* Replace "/your-new-page" with the actual target link for each service */}
         <a
-          href="/new-page" // Replace with your actual new page URL or route
+          href="/your-new-page"
           className="absolute top-2 right-2 text-xl font-bold text-gray-800 hover:text-gray-600 cursor-pointer"
           aria-label={`Open new page for ${title}`}
         >

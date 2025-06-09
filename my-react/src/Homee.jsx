@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Link } from "react-router-dom"; 
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
@@ -182,55 +183,66 @@ const Homee = () => {
         </section>
       </div>
 
-      {/* Service Section */}
-<div className="flex flex-col justify-center bg-[#A7C1A8] w-full py-12 px-4 mb-8">
-  <h1 className="text-4xl text-center underline underline-offset-8 decoration-black mb-10 font-bold tracking-wide">
-    Services
-  </h1>
+{/* Service Section */}
+    <div className="flex flex-col justify-center bg-[#A7C1A8] w-full py-12 px-4 mb-8">
+      <h1 className="text-4xl text-center underline underline-offset-8 decoration-black mb-10 font-bold tracking-wide">
+        Services
+      </h1>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-    
-    {/* Service Card 1 */}
-    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-      <h1 className="bg-[#D1D8BE] text-2xl text-center">VIP Tickets</h1>
-      <img
-        src="./Photos/p2.jpg"
-        alt="Service Two"
-        className="object-cover w-full h-full"
-      />
-    </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        {/* Service Card 1 */}
+        <Link to="/KashiDarshan">
+          <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 bg-white">
+            <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">Kashi Darshan</h2>
+            <img
+              loading="lazy"
+              src="./Photos/p2.jpg" // or use: src={p2}
+              alt="Kashi Darshan"
+              className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
+            />
+          </div>
+        </Link>
 
-    {/* Service Card 2 (Image Example) */}
-    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-      <h1 className="bg-[#D1D8BE] text-2xl text-center">Hotels</h1>
-      <img
-        src="./Photos/p7.jpg"
-        alt="Service Two"
-        className="object-cover w-full h-full"
-      />
-    </div>
+        {/* Service Card 2 */}
+        <Link to="/HotelBooking">
+          <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 bg-white">
+            <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">Hotels</h2>
+            <img
+              loading="lazy"
+              src="./Photos/p7.jpg" // or use: src={p7}
+              alt="Hotels"
+              className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
+            />
+          </div>
+        </Link>
 
-    {/* Service Card 3 */}
-    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-      <h1 className="bg-[#D1D8BE] text-2xl text-center">Boating</h1>
-      <img
-        src="./Photos/v1.jpg"
-        alt="Service Two"
-        className="object-cover w-full h-full"
-      />
-    </div>
+        {/* Service Card 3 */}
+        <Link to="/BoatBooking">
+          <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 bg-white">
+            <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">Boating</h2>
+            <img
+              loading="lazy"
+              src="./Photos/v1.jpg" // or use: src={v1}
+              alt="Boating"
+              className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
+            />
+          </div>
+        </Link>
 
-    {/* Service Card 4 */}
-    <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-      <h1 className="bg-[#D1D8BE] text-2xl text-center">Cab Booking</h1>
-      <img
-        src="./Photos/cabbooking.png"
-        alt="Service Two"
-        className="object-cover w-full h-full"
-      />
+        {/* Service Card 4 */}
+        <Link to="/CabBooking">
+          <div className="rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 bg-white">
+            <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">Cab Booking</h2>
+            <img
+              loading="lazy"
+              src="./Photos/cabbooking.png" // or use: src={cab}
+              alt="Cab Booking"
+              className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
+            />
+          </div>
+        </Link>
+      </div>
     </div>
-  </div>
-</div>
 
 
 {/* Why Choose Us Section */}

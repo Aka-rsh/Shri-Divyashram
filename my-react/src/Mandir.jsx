@@ -11,6 +11,12 @@ const templeData = [
   description: "One of the 12 Jyotirlingas, dedicated to Lord Shiva, with a golden dome and deep spiritual legacy."
 },
   {
+  "imageUrl": "./Varanasi/Swarvedmahamandir.jpeg",
+  "templeName": "Swarved MahaMandir Yoga Center",
+  "location": "Umaraha, Mudli, Varanasi",
+  "description": "A serene place dedicated to yoga and meditation, promoting holistic wellness and spiritual growth in the heart of Varanasi."
+ },
+  {
     imageUrl: "./Varanasi/Durgakund.jpg",
     templeName: "Durga Kund Mandir",
     location: "Durgakund Road, Varanasi",

@@ -1,11 +1,15 @@
 import React from 'react';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const prasadItems = [
-  { name: 'Ladoo Prasad', price: 151, weight: '250g (4–5 ladoos)' },
-  { name: 'Panchamrit Bhog', price: 201, weight: '200ml' },
-  { name: 'Dry Fruit Prasad Box', price: 351, weight: '300g' },
-  { name: 'Tulsi Mala + Prasad Combo', price: 251, weight: '150g (includes mala + prasad)' },
+  { name: 'Kashi Vishwanath Mandir Prasad', image: './Varanasi/KashivishwanathPrasad.jpeg' },
+  { name: 'Annapurna Mata Mandir', image: './Varanasi/Annapurnamata.jpeg' },
+  { name: 'Gangajal', image: './Varanasi/GangaJal.png' },
+  { name: 'Rudraksh Mala', image: './Varanasi/RudrakshaMala.jpeg' },
+  { name: 'Sacred Ash (Bhabhut)', image: './Varanasi/Bhasma.png' },
+  { name: 'Sankat Mochan Prasad', image: './Varanasi/SankatMochanPrasad.jpeg' },
+  { name: 'Kal Bhairav Prasad + band', image: './Varanasi/KalBhairavPrasadband.jpeg' },
 ];
 
 const Prasad = () => {
@@ -25,38 +29,71 @@ const Prasad = () => {
         </p>
       </div>
 
-      {/* Prasad Booking Section */}
+      {/* Prasad Items Section */}
       <div className="bg-amber-100 py-10">
-        <h2 className="text-2xl text-center font-semibold text-amber-800 mb-6">Bhog / Prasad Items</h2>
+        <h2 className="text-2xl text-center font-semibold text-amber-800 mb-10">Bhog / Prasad Items</h2>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
-          {prasadItems.map((item, index) => {
-            const message = `Namaste 🙏, I would like to order the *${item.name}* (${item.weight}) Prasad for ₹${item.price}. Please guide me further.`;
-            const whatsappUrl = `https://wa.me/917007094655?text=${encodeURIComponent(message)}`;
-
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-md border p-5 flex flex-col justify-between"
-              >
-                <div>
-                  <h3 className="text-xl font-semibold text-amber-700">{item.name}</h3>
-                  <p className="text-gray-600 text-sm mt-1 mb-1">Weight: {item.weight}</p>
-                  <p className="text-gray-700 mb-3 font-medium">Price: ₹{item.price}</p>
-                </div>
-                <a
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-auto bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-sm text-center font-medium transition"
-                >
-                  Book via WhatsApp
-                </a>
+        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 px-4">
+          {prasadItems.map((item, index) => (
+            <div key={index} className="flex flex-col items-center text-center">
+              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full overflow-hidden shadow-md border-4 border-white bg-white">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            );
-          })}
+              <h3 className="mt-4 text-lg font-semibold text-amber-800">{item.name}</h3>
+            </div>
+          ))}
         </div>
       </div>
+      {/* Final Fixed Price Section */}
+<div className="bg-gray-100 py-14 px-4">
+  <h2 className="text-2xl text-center font-bold text-amber-700 mb-6">
+    Prasad Offerings – Fixed Price
+  </h2>
+  <p className="text-center text-gray-700 mb-10">
+    Each divine prasad item is now available at <span className="font-semibold text-green-600">₹501 + delivery charges</span>.
+    Choose your blessing and order easily via WhatsApp.
+  </p>
+
+  <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {prasadItems.map((item, index) => {
+    const message = `Namaste 🙏, I would like to order the *${item.name}* for ₹501 + delivery charges. Please guide me further.\n\nनमस्ते 🙏, मैं *${item.name}* प्रसाद ₹501 + डिलीवरी चार्ज के साथ बुक करना चाहता/चाहती हूँ। कृपया आगे की जानकारी दें।`;
+    const whatsappUrl = `https://wa.me/917007094655?text=${encodeURIComponent(message)}`;
+
+      return (
+        <div
+          key={index}
+          className="bg-white shadow rounded-lg p-6 flex flex-col items-center text-center"
+        >
+          <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-amber-200">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <h3 className="text-lg font-semibold text-amber-800 mb-2">{item.name}</h3>
+          <p className="text-gray-600 mb-3">Price: ₹501 + Delivery</p>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded text-sm font-medium transition"
+          >
+            Book via WhatsApp
+          </a>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+{/* Footer */}
+<Footer></Footer>
+
     </div>
   );
 };

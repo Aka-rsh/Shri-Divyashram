@@ -272,7 +272,7 @@ const HotelBooking = () => {
  <h1 className="text-4xl font-bold text-center text-yellow-900 my-6">
   Platforms Where We Are Listed
 </h1>
-<div className="flex justify-center mt-4 space-x-4 flex-wrap mb-3">
+<div className="flex justify-center mt-4 space-x-4 flex-wrap mb-3 sm:mt-2">
   {via.map((item, index) => (
           <a
             key={index}
