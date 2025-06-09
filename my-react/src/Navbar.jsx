@@ -33,7 +33,7 @@ const Navbar = () => {
         { text: "🚖 Cab Booking", path: "/CabBooking" },
         { text: "🛕 VIP Darshan Ticket", path: "/VipTicket" },
         { text: "✈ Flight Ticket", path: "/Fticket" },
-        { text: "🚉 Train Ticket", path: "/Tticket" },
+        { text: "🚉 Train Ticket", path: "/Fticket" },
       ],
     },
     { icon: <FaLock />, text: "Mandir", path: "/Mandir" },
