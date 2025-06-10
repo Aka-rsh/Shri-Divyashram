@@ -1,325 +1,592 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import DarshanCard from './DarshanCard';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// (Keep your existing templeData array here, it's perfect)
 const templeData = [
- {
-  imageUrl: "./Varanasi/T1.jpg",
-  templeName: "Kashi Vishwanath Mandir",
-  location: "Vishwanath Gali, Varanasi",
-  description: "One of the 12 Jyotirlingas, dedicated to Lord Shiva, with a golden dome and deep spiritual legacy."
-},
   {
-  "imageUrl": "./Varanasi/Swarvedmahamandir.jpeg",
-  "templeName": "Swarved MahaMandir Yoga Center",
-  "location": "Umaraha, Mudli, Varanasi",
-  "description": "A serene place dedicated to yoga and meditation, promoting holistic wellness and spiritual growth in the heart of Varanasi."
- },
+    imageUrl: "./Varanasi/T1.jpg",
+    templeName: {
+      en: "Kashi Vishwanath Mandir",
+      hi: "काशी विश्वनाथ मंदिर"
+    },
+    location: {
+      en: "Vishwanath Gali, Varanasi",
+      hi: "विश्वनाथ गली, वाराणसी"
+    },
+    description: {
+      en: "One of the 12 Jyotirlingas, dedicated to Lord Shiva, with a golden dome and deep spiritual legacy.",
+      hi: "12 ज्योतिर्लिंगों में से एक, भगवान शिव को समर्पित, एक सुनहरे गुंबद और गहरी आध्यात्मिक विरासत के साथ।"
+    }
+  },
+  {
+    imageUrl: "./Varanasi/Swarvedmahamandir.jpeg",
+    templeName: {
+      en: "Swarved MahaMandir Yoga Center",
+      hi: "स्वर्वेद महामंदिर योग केंद्र"
+    },
+    location: {
+      en: "Umaraha, Mudli, Varanasi",
+      hi: "उमरहा, मुडली, वाराणसी"
+    },
+    description: {
+      en: "A serene place dedicated to yoga and meditation, promoting holistic wellness and spiritual growth in the heart of Varanasi.",
+      hi: "योग और ध्यान के लिए समर्पित एक शांत स्थान, वाराणसी के हृदय में समग्र कल्याण और आध्यात्मिक विकास को बढ़ावा देता है।"
+    }
+  },
   {
     imageUrl: "./Varanasi/Durgakund.jpg",
-    templeName: "Durga Kund Mandir",
-    location: "Durgakund Road, Varanasi",
-    description: "18th-century Nagara-style temple dedicated to Goddess Durga, known for its sacred kund and red structure.",
+    templeName: {
+      en: "Durga Kund Mandir",
+      hi: "दुर्गा कुंड मंदिर"
+    },
+    location: {
+      en: "Durgakund Road, Varanasi",
+      hi: "दुर्गाकुंड रोड, वाराणसी"
+    },
+    description: {
+      en: "18th-century Nagara-style temple dedicated to Goddess Durga, known for its sacred kund and red structure.",
+      hi: "देवी दुर्गा को समर्पित 18वीं सदी का नागर-शैली का मंदिर, अपने पवित्र कुंड और लाल संरचना के लिए जाना जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/KaalBhairav.jpg",
-    templeName: "Kaal Bhairav Mandir",
-    location: "Vishweshwarganj, Varanasi",
-    description: "Ancient temple of Lord Bhairav, protector of the city, known for skull garlands and fierce energy.",
+    templeName: {
+      en: "Kaal Bhairav Mandir",
+      hi: "काल भैरव मंदिर"
+    },
+    location: {
+      en: "Vishweshwarganj, Varanasi",
+      hi: "विश्वेश्वरगंज, वाराणसी"
+    },
+    description: {
+      en: "Ancient temple of Lord Bhairav, protector of the city, known for skull garlands and fierce energy.",
+      hi: "भगवान भैरव का प्राचीन मंदिर, शहर का संरक्षक, खोपड़ी की माला और उग्र ऊर्जा के लिए जाना जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/Maa-Annapurna.jpg",
-    templeName: "Maa Annapurna Mandir",
-    location: "Godowlia, Varanasi",
-    description: "Temple of Goddess Annapurna, provider of food and nourishment, featuring brass and gold idols.",
+    templeName: {
+      en: "Maa Annapurna Mandir",
+      hi: "माँ अन्नपूर्णा मंदिर"
+    },
+    location: {
+      en: "Godowlia, Varanasi",
+      hi: "गोदौलिया, वाराणसी"
+    },
+    description: {
+      en: "Temple of Goddess Annapurna, provider of food and nourishment, featuring brass and gold idols.",
+      hi: "देवी अन्नपूर्णा का मंदिर, भोजन और पोषण प्रदाता, जिसमें पीतल और सोने की मूर्तियाँ हैं।"
+    },
   },
   {
     imageUrl: "./Varanasi/Sankatmochan.jpg",
-    templeName: "Sankat Mochan Hanuman Mandir",
-    location: "Near Assi Ghat, Varanasi",
-    description: "Built by Tulsidas, this Hanuman temple is known for its peaceful ambiance and devotional chants.",
+    templeName: {
+      en: "Sankat Mochan Hanuman Mandir",
+      hi: "संकट मोचन हनुमान मंदिर"
+    },
+    location: {
+      en: "Near Assi Ghat, Varanasi",
+      hi: "अस्सी घाट के पास, वाराणसी"
+    },
+    description: {
+      en: "Built by Tulsidas, this Hanuman temple is known for its peaceful ambiance and devotional chants.",
+      hi: "तुलसीदास द्वारा निर्मित, यह हनुमान मंदिर अपने शांतिपूर्ण माहौल और भक्तिमय मंत्रों के लिए जाना जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/Nepalitemple.jpeg",
-    templeName: "Kanthwala (Nepali) Temple",
-    location: "Lalita Ghat, Varanasi",
-    description: "19th-century wooden temple modeled after Nepal's Pashupatinath, also called Mini Khajuraho.",
+    templeName: {
+      en: "Kanthwala (Nepali) Temple",
+      hi: "कंठवाला (नेपाली) मंदिर"
+    },
+    location: {
+      en: "Lalita Ghat, Varanasi",
+      hi: "ललिता घाट, वाराणसी"
+    },
+    description: {
+      en: "19th-century wooden temple modeled after Nepal's Pashupatinath, also called Mini Khajuraho.",
+      hi: "नेपाल के पशुपतिनाथ के बाद निर्मित 19वीं सदी का लकड़ी का मंदिर, जिसे मिनी खजुराहो भी कहा जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/Vishalakshimandir.jpeg",
-    templeName: "Vishalakshi Mandir",
-    location: "Manikarnika Ghat, Varanasi",
-    description: "One of the Shakti Peeths, where Goddess Sati's earring fell; a sacred and powerful shrine.",
+    templeName: {
+      en: "Vishalakshi Mandir",
+      hi: "विशालाक्षी मंदिर"
+    },
+    location: {
+      en: "Manikarnika Ghat, Varanasi",
+      hi: "मणिकर्णिका घाट, वाराणसी"
+    },
+    description: {
+      en: "One of the Shakti Peeths, where Goddess Sati's earring fell; a sacred and powerful shrine.",
+      hi: "शक्ति पीठों में से एक, जहाँ देवी सती की बाली गिरी थी; एक पवित्र और शक्तिशाली मंदिर।"
+    },
   },
   {
     imageUrl: "./Varanasi/BharatMandir.jpeg",
-    templeName: "Bharat Mata Mandir",
-    location: "Varanasi",
-    description: "Unique temple with no deity, featuring a 3D marble map of undivided India; symbol of patriotism.",
+    templeName: {
+      en: "Bharat Mata Mandir",
+      hi: "भारत माता मंदिर"
+    },
+    location: {
+      en: "Varanasi",
+      hi: "वाराणसी"
+    },
+    description: {
+      en: "Unique temple with no deity, featuring a 3D marble map of undivided India; symbol of patriotism.",
+      hi: "कोई देवता नहीं वाला अनोखा मंदिर, जिसमें अखंड भारत का 3डी संगमरमर का नक्शा है; देशभक्ति का प्रतीक।"
+    },
   },
   {
     imageUrl: "./Varanasi/SankataMandir.jpeg",
-    templeName: "Sankata Devi Mandir",
-    location: "Varanasi",
-    description: "Goddess Sankata is believed to relieve sorrows; popular among women and during Navratri.",
+    templeName: {
+      en: "Sankata Devi Mandir",
+      hi: "संकटा देवी मंदिर"
+    },
+    location: {
+      en: "Varanasi",
+      hi: "वाराणसी"
+    },
+    description: {
+      en: "Goddess Sankata is believed to relieve sorrows; popular among women and during Navratri.",
+      hi: "देवी संकटा को दुखों से मुक्ति दिलाने वाली माना जाता है; महिलाओं और नवरात्रि के दौरान लोकप्रिय।"
+    },
   },
   {
     imageUrl: "./Varanasi/LalitaGauritemple.jpg",
-    templeName: "Lalita Gauri Temple",
-    location: "Near Lalita Ghat, Varanasi",
-    description: "19th-century temple of wealth and prosperity built by Nepalese king near Nepali temple.",
+    templeName: {
+      en: "Lalita Gauri Temple",
+      hi: "ललिता गौरी मंदिर"
+    },
+    location: {
+      en: "Near Lalita Ghat, Varanasi",
+      hi: "ललिता घाट के पास, वाराणसी"
+    },
+    description: {
+      en: "19th-century temple of wealth and prosperity built by Nepalese king near Nepali temple.",
+      hi: "नेपाली मंदिर के पास नेपाली राजा द्वारा निर्मित धन और समृद्धि का 19वीं सदी का मंदिर।"
+    },
   },
   {
     imageUrl: "./Varanasi/Manasmandir.jpeg",
-    templeName: "Tulsi Manas Temple",
-    location: "Sankat Mochan Road, Varanasi",
-    description: "White marble temple where Tulsidas wrote Ramcharitmanas; walls feature verses and epics.",
+    templeName: {
+      en: "Tulsi Manas Temple",
+      hi: "तुलसी मानस मंदिर"
+    },
+    location: {
+      en: "Sankat Mochan Road, Varanasi",
+      hi: "संकट मोचन रोड, वाराणसी"
+    },
+    description: {
+      en: "White marble temple where Tulsidas wrote Ramcharitmanas; walls feature verses and epics.",
+      hi: "सफेद संगमरमर का मंदिर जहाँ तुलसीदास ने रामचरितमानस लिखी थी; दीवारों पर छंद और महाकाव्य हैं।"
+    },
   },
   {
     imageUrl: "./Varanasi/Mitrunjaymandir.jpeg",
-    templeName: "Mrityunjay Mahadev Temple",
-    location: "Daranagar, Varanasi",
-    description: "Shiva temple believed to protect from untimely death; contains a healing well.",
+    templeName: {
+      en: "Mrityunjay Mahadev Temple",
+      hi: "मृत्युंजय महादेव मंदिर"
+    },
+    location: {
+      en: "Daranagar, Varanasi",
+      hi: "दरानगर, वाराणसी"
+    },
+    description: {
+      en: "Shiva temple believed to protect from untimely death; contains a healing well.",
+      hi: "शिव मंदिर असमय मृत्यु से रक्षा करने वाला माना जाता है; इसमें एक उपचार कुआँ है।"
+    },
   },
   {
     imageUrl: "./Varanasi/TilbhandeshwarMahadev.jpeg",
-    templeName: "Tilbhandeshwar Mahadev Mandir",
-    location: "Varanasi",
-    description: "Naturally growing Shiva linga worshipped with both Malayali and Benarasi rituals.",
+    templeName: {
+      en: "Tilbhandeshwar Mahadev Mandir",
+      hi: "तिलबंडेश्वर महादेव मंदिर"
+    },
+    location: {
+      en: "Varanasi",
+      hi: "वाराणसी"
+    },
+    description: {
+      en: "Naturally growing Shiva linga worshipped with both Malayali and Benarasi rituals.",
+      hi: "स्वाभाविक रूप से बढ़ते शिव लिंग की पूजा मलयाली और बनारसी दोनों रीति-रिवाजों से की जाती है।"
+    },
   },
   {
-    imageUrl: "./Varanasi/BhuVT.jpeg",
-    templeName: "New Vishwanath Temple (BHU)",
-    location: "BHU Campus, Varanasi",
-    description: "Marble replica of the original temple, built by Birla family, open to all castes and religions.",
+    imageUrl: "./Varanasi/BhuVT.png",
+    templeName: {
+      en: "New Vishwanath Temple (BHU)",
+      hi: "नया विश्वनाथ मंदिर (बीएचयू)"
+    },
+    location: {
+      en: "BHU Campus, Varanasi",
+      hi: "बीएचयू परिसर, वाराणसी"
+    },
+    description: {
+      en: "Marble replica of the original temple, built by Birla family, open to all castes and religions.",
+      hi: "मूल मंदिर की संगमरमर की प्रतिकृति, बिड़ला परिवार द्वारा निर्मित, सभी जातियों और धर्मों के लिए खुला।"
+    },
   },
   {
     imageUrl: "./Varanasi/Dundi Raj Ganesh Temple.jpeg",
-    templeName: "Dundi Raj Ganesh Temple",
-    location: "Near Kashi Vishwanath, Varanasi",
-    description: "Oldest Ganesh temple in the city, believed to remove sorrows and grant blessings.",
+    templeName: {
+      en: "Dundi Raj Ganesh Temple",
+      hi: "डुंडी राज गणेश मंदिर"
+    },
+    location: {
+      en: "Near Kashi Vishwanath, Varanasi",
+      hi: "काशी विश्वनाथ के पास, वाराणसी"
+    },
+    description: {
+      en: "Oldest Ganesh temple in the city, believed to remove sorrows and grant blessings.",
+      hi: "शहर का सबसे पुराना गणेश मंदिर, दुखों को दूर करने और आशीर्वाद देने वाला माना जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/ISKCONTemple.jpeg",
-    templeName: "ISKCON Temple",
-    location: "Near BHU, Varanasi",
-    description: "Marble temple of Lord Krishna known for Sunday feasts, kirtans, and spiritual gatherings.",
+    templeName: {
+      en: "ISKCON Temple",
+      hi: "इस्कॉन मंदिर"
+    },
+    location: {
+      en: "Near BHU, Varanasi",
+      hi: "बीएचयू के पास, वाराणसी"
+    },
+    description: {
+      en: "Marble temple of Lord Krishna known for Sunday feasts, kirtans, and spiritual gatherings.",
+      hi: "भगवान कृष्ण का संगमरमर का मंदिर रविवार के दावतों, कीर्तनों और आध्यात्मिक सभाओं के लिए जाना जाता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/RatneshwarMahadevTemple.jpeg",
-    templeName: "Ratneshwar Mahadev Temple",
-    location: "Scindia Ghat, Varanasi",
-    description: "Half-submerged temple believed to grant male offspring, best viewed from the river.",
+    templeName: {
+      en: "Ratneshwar Mahadev Temple",
+      hi: "रत्नेश्वर महादेव मंदिर"
+    },
+    location: {
+      en: "Scindia Ghat, Varanasi",
+      hi: "सिंधिया घाट, वाराणसी"
+    },
+    description: {
+      en: "Half-submerged temple believed to grant male offspring, best viewed from the river.",
+      hi: "आधा डूबा हुआ मंदिर जिसे पुरुष संतान प्रदान करने वाला माना जाता है, नदी से सबसे अच्छा देखा जा सकता है।"
+    },
   },
   {
     imageUrl: "./Varanasi/VyasaTemple.jpeg",
-    templeName: "Vyasa Temple",
-    location: "Eastern bank of Ganga, Varanasi",
-    description: "Dedicated to sage Vyasa who wrote Mahabharata; located outside the main city per legend.",
+    templeName: {
+      en: "Vyasa Temple",
+      hi: "व्यास मंदिर"
+    },
+    location: {
+      en: "Eastern bank of Ganga, Varanasi",
+      hi: "गंगा के पूर्वी तट, वाराणसी"
+    },
+    description: {
+      en: "Dedicated to sage Vyasa who wrote Mahabharata; located outside the main city per legend.",
+      hi: "ऋषि व्यास को समर्पित जिन्होंने महाभारत लिखा था; किंवदंती के अनुसार मुख्य शहर के बाहर स्थित है।"
+    },
   },
   {
-  imageUrl: "./Varanasi/BadaGaneshMandir.jpeg",
-  templeName: "Bada Ganesh Mandir",
-  location: "Lohatiya, Varanasi",
-  description: "Home to the rare Swambhu Trinetra idol of Lord Ganesha, worshipped for removing obstacles and fulfilling wishes, especially on Ganesh Chaturthi.",
+    imageUrl: "./Varanasi/BadaGaneshMandir.jpeg",
+    templeName: {
+      en: "Bada Ganesh Mandir",
+      hi: "बड़ा गणेश मंदिर"
+    },
+    location: {
+      en: "Lohatiya, Varanasi",
+      hi: "लोहटिया, वाराणसी"
+    },
+    description: {
+      en: "Home to the rare Swambhu Trinetra idol of Lord Ganesha, worshipped for removing obstacles and fulfilling wishes, especially on Ganesh Chaturthi.",
+      hi: "भगवान गणेश की दुर्लभ स्वयंभू त्रिनेत्र मूर्ति का घर, बाधाओं को दूर करने और इच्छाओं को पूरा करने के लिए पूजा की जाती है, विशेष रूप से गणेश चतुर्थी पर।"
+    },
   },
   {
     imageUrl: "./Varanasi/MarkandeyMahadevTemple.jpeg",
-    templeName: "Markandey Mahadev Temple",
-    location: "Kaithi, Varanasi",
-    description: "Temple where Lord Shiva saved a boy from death; popular during Mahashivratri.",
+    templeName: {
+      en: "Markandey Mahadev Temple",
+      hi: "मार्कंडेय महादेव मंदिर"
+    },
+    location: {
+      en: "Kaithi, Varanasi",
+      hi: "कैथी, वाराणसी"
+    },
+    description: {
+      en: "Temple where Lord Shiva saved a boy from death; popular during Mahashivratri.",
+      hi: "मंदिर जहाँ भगवान शिव ने एक लड़के को मृत्यु से बचाया था; महाशिवरात्रि के दौरान लोकप्रिय।"
+    },
   },
   {
     imageUrl: "./Varanasi/TridevTemple.jpeg",
-    templeName: "Tridev Temple",
-    location: "Near Tulsi Manas Temple, Varanasi",
-    description: "Modern temple dedicated to Hanuman, Khatu Shyam, and Rani Sati Dadi; photography allowed.",
+    templeName: {
+      en: "Tridev Temple",
+      hi: "त्रिदेव मंदिर"
+    },
+    location: {
+      en: "Near Tulsi Manas Temple, Varanasi",
+      hi: "तुलsi मानस मंदिर के पास, वाराणसी"
+    },
+    description: {
+      en: "Modern temple dedicated to Hanuman, Khatu Shyam, and Rani Sati Dadi; photography allowed.",
+      hi: "हनुमान, खाटू श्याम और रानी सती दादी को समर्पित आधुनिक मंदिर; फोटोग्राफी की अनुमति है।"
+    },
   },
 ];
 
+// (Keep your existing cities data here, it's perfect)
 const cities = [
   {
-    name: "All",
+    name: { en: "All", hi: "सभी" },
     image: "./Cities/All.jpeg",
     level: 1,
   },
-  // 🟢 Tier 1: Top pilgrimage cities in UP
   {
-    name: "Varanasi",
+    name: { en: "Varanasi", hi: "वाराणसी" },
     image: "./Cities/Vns.jpeg",
     level: 1,
   },
   {
-    name: "Ayodhya",
+    name: { en: "Ayodhya", hi: "अयोध्या" },
     image: "./Cities/Ayodhya.jpeg",
     level: 1,
   },
   {
-    name: "Mathura",
+    name: { en: "Mathura", hi: "मथुरा" },
     image: "./Cities/Mathura.jpeg",
     level: 1,
   },
   {
-    name: "Prayagraj (Allahabad)",
+    name: { en: "Prayagraj (Allahabad)", hi: "प्रयागराज (इलाहाबाद)" },
     image: "./Cities/pyj.jpeg",
     level: 1,
   },
   {
-    name: "Vrindavan",
+    name: { en: "Vrindavan", hi: "वृंदावन" },
     image: "./Cities/Vrindavan.jpeg",
     level: 1,
   },
-
-  // 🟡 Tier 2: Other significant pilgrimage cities in UP
   {
-    name: "Bodhgaya",
+    name: { en: "Bodhgaya", hi: "बोधगया" },
     image: "./Cities/bodhgaya.jpeg",
     level: 2,
   },
   {
-    name: "Sarnath",
+    name: { en: "Sarnath", hi: "सारनाथ" },
     image: "./Cities/Sarnath.jpeg",
     level: 2,
   },
   {
-    name: "Gorakhpur",
+    name: { en: "Gorakhpur", hi: "गोरखपुर" },
     image: "./Cities/Gorakhpur.jpeg",
     level: 2,
   },
   {
-    name: "Chitrakoot",
+    name: { en: "Chitrakoot", hi: "चित्रकूट" },
     image: "./Cities/Chitrakoot.jpeg",
     level: 2,
   },
   {
-    name: "Naimisharanya",
+    name: { en: "Naimisharanya", hi: "नैमिषारण्य" },
     image: "./Cities/Naimisharanya.jpeg",
     level: 2,
   },
-
-  // 🟠 Tier 3: Major pilgrimage cities across India (beyond UP)
   {
-    name: "Haridwar",
+    name: { en: "Haridwar", hi: "हरिद्वार" },
     image: "./Cities/Haridwar.jpeg",
     level: 3,
   },
   {
-    name: "Rishikesh",
+    name: { en: "Rishikesh", hi: "ऋषिकेश" },
     image: "./Cities/Rishikesh.jpeg",
     level: 3,
   },
   {
-    name: "Ujjain",
+    name: { en: "Ujjain", hi: "उज्जैन" },
     image: "./Cities/Ujjain.jpeg",
     level: 3,
   },
   {
-    name: "Dwarka",
+    name: { en: "Dwarka", hi: "द्वारका" },
     image: "./Cities/Dwarka.jpeg",
     level: 3,
   },
   {
-    name: "Puri",
+    name: { en: "Puri", hi: "पुरी" },
     image: "./Cities/Puri.jpeg",
     level: 3,
   },
   {
-    name: "Amritsar",
+    name: { en: "Amritsar", hi: "अमृतसर" },
     image: "./Cities/Amritsar.jpeg",
     level: 3,
   },
   {
-    name: "Tirupati",
+    name: { en: "Tirupati", hi: "तिरुपति" },
     image: "./Cities/Tirupati.jpeg",
     level: 3,
   },
   {
-    name: "Madurai",
+    name: { en: "Madurai", hi: "मदुरै" },
     image: "./Cities/Madurai.jpeg",
     level: 3,
   },
   {
-    name: "Katra (Vaishno Devi)",
+    name: { en: "Katra (Vaishno Devi)", hi: "कटरा (वैष्णो देवी)" },
     image: "./Cities/Katra (Vaishno Devi).jpeg",
     level: 3,
   },
   {
-    name: "Shirdi",
+    name: { en: "Shirdi", hi: "शिर्डी" },
     image: "./Cities/Shirdi.jpeg",
     level: 3,
   },
   {
-    name: "Shingnapur",
+    name: { en: "Shingnapur", hi: "शिंगणापुर" },
     image: "./Cities/Shingnapur.jpeg",
     level: 3,
   },
   {
-    name: "Pushkar",
+    name: { en: "Pushkar", hi: "पुष्कर" },
     image: "./Cities/Pushkar.jpeg",
     level: 3,
   },
   {
-    name: "Badrinath",
+    name: { en: "Badrinath", hi: "बद्रीनाथ" },
     image: "./Cities/Badrinath.jpeg",
     level: 3,
   },
   {
-    name: "Kedarnath",
+    name: { en: "Kedarnath", hi: "केदारनाथ" },
     image: "./Cities/Kedarnath.jpeg",
     level: 3,
   },
   {
-    name: "Gangotri",
+    name: { en: "Gangotri", hi: "गंगोत्री" },
     image: "./Cities/Gangotri.jpeg",
     level: 3,
   },
   {
-    name: "Yamunotri",
+    name: { en: "Yamunotri", hi: "यमुनोत्री" },
     image: "./Cities/Yamunotri.jpeg",
     level: 3,
   },
   {
-    name: "Goa", // Included for churches/cathedrals, specifically Old Goa
+    name: { en: "Goa", hi: "गोवा" },
     image: "./Cities/Goa.jpeg",
     level: 3,
   },
   {
-    name: "Ajmer",
+    name: { en: "Ajmer", hi: "अजमेर" },
     image: "./Cities/Ajmer.jpeg",
     level: 3,
   },
   {
-    name: "Sabarimala",
+    name: { en: "Sabarimala", hi: "सबरीमाला" },
     image: "./Cities/Sabarimala.jpeg",
     level: 3,
   },
   {
-    name: "Somnath",
+    name: { en: "Somnath", hi: "सोमनाथ" },
     image: "./Cities/Somnath.jpeg",
     level: 3,
   },
   {
-    name: "Rameswaram",
+    name: { en: "Rameswaram", hi: "रामेश्वरम" },
     image: "./Cities/Rameswaram.jpeg",
     level: 3,
   },
   {
-    name: "Nashik",
+    name: { en: "Nashik", hi: "नाशिक" },
     image: "./Cities/Nashik.jpeg",
     level: 3,
   },
   {
-    name: "Trimbakeshwar",
+    name: { en: "Trimbakeshwar", hi: "त्र्यंबकेश्वर" },
     image: "./Cities/Trimbakeshwar.jpeg",
     level: 3,
   },
 ];
 
-const Mandir = () => {
-  const videoRef = useRef(null);  // <--- Declare videoRef here
+const CitySelector = ({ cities, language, onSelectCity, selectedCity }) => {
+  const scrollRef = useRef(null);
+  const currentLangKey = language === 'EN' ? 'en' : 'hi';
 
-  // Autoplay video on load
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (current) {
+      if (direction === "left") {
+        current.scrollBy({ left: -300, behavior: "smooth" });
+      } else {
+        current.scrollBy({ left: 300, behavior: "smooth" });
+      }
+    }
+  };
+
+  return (
+    <div className="p-4 bg-[#EFE4D2] rounded-lg shadow-xl max-w-6xl mx-auto mt-8 mb-6">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4 text-center text-gray-800">
+        {currentLangKey === 'en' ? 'Select Your City for Divine Services' : 'दिव्य सेवाओं के लिए अपना शहर चुनें'}
+      </h1>
+
+      <div className="relative group">
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-2 opacity-70 group-hover:opacity-100 hover:scale-110 transition-all duration-200"
+          aria-label={currentLangKey === 'en' ? "Scroll left" : "बाएं स्क्रॉल करें"}
+        >
+          <ChevronLeft size={28} className="text-gray-700" />
+        </button>
+
+        <div
+          ref={scrollRef}
+          className="flex space-x-4 overflow-x-auto scrollbar-hide py-4 px-2 sm:px-8"
+        >
+          {cities.map((city, index) => (
+            <div
+              key={index}
+              onClick={() => onSelectCity(city.name.en)} // Pass the English name for filtering
+              className={`min-w-[140px] sm:min-w-[180px] bg-white rounded-lg shadow-md hover:shadow-xl cursor-pointer transition-transform transform hover:scale-105 overflow-hidden flex flex-col
+                ${selectedCity === city.name.en ? 'ring-4 ring-amber-500' : ''} `}
+            >
+              <img
+                src={city.image}
+                alt={city.name[currentLangKey]}
+                className="w-full h-32 sm:h-40 object-cover rounded-t-lg"
+              />
+              <div className="text-center font-semibold text-gray-800 py-2 px-1 text-sm sm:text-base">
+                {city.name[currentLangKey]}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white rounded-full shadow-lg p-2 opacity-70 group-hover:opacity-100 hover:scale-110 transition-all duration-200"
+          aria-label={currentLangKey === 'en' ? "Scroll right" : "दाएं स्क्रॉल करें"}
+        >
+          <ChevronRight size={28} className="text-gray-700" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+const Mandir = ({ language }) => {
+  const videoRef = useRef(null);
+  const [selectedCity, setSelectedCity] = useState("Varanasi"); // State to hold the selected city
+  const currentLangKey = language === 'EN' ? 'en' : 'hi';
+
+  const introLines = {
+    en: "Immerse yourself in the spiritual grandeur and architectural marvels. Each sacred site tells a tale of devotion, peace, and ancient wisdom.",
+    hi: "आध्यात्मिक भव्यता और स्थापत्य चमत्कारों में खुद को डुबो दें। प्रत्येक पवित्र स्थल भक्ति, शांति और प्राचीन ज्ञान की कहानी कहता है।"
+  };
+
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play().catch((e) =>
@@ -328,11 +595,19 @@ const Mandir = () => {
     }
   }, []);
 
+  // Filter temples based on the selected city
+  const filteredTemples = selectedCity === "All"
+    ? templeData
+    : templeData.filter(temple =>
+        temple.location.en.toLowerCase().includes(selectedCity.toLowerCase())
+      );
+
   return (
-    <div>
+    <div className="bg-gray-50 text-gray-800">
       <Navbar />
+
       {/* Hero Video Section */}
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-[60vh] md:h-screen overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
@@ -343,61 +618,56 @@ const Mandir = () => {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="./Darshan/Kashi-darshan-vd.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          <p className="text-red-500 p-4 absolute inset-0 flex items-center justify-center bg-black bg-opacity-70">
+            {currentLangKey === 'en' ? 'Your browser does not support the video tag.' : 'आपका ब्राउज़र वीडियो टैग का समर्थन नहीं करता है।'}
+          </p>
         </video>
-        <div className="absolute bottom-4 left-4 text-white text-xs">
-          Video credit:{" "}
+        <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white text-xs sm:text-sm md:text-base bg-black bg-opacity-40 rounded-md px-2 py-1">
+          {currentLangKey === 'en' ? 'Video credit:' : 'वीडियो क्रेडिट:'}{" "}
           <a
-            href="https://example.com/credit"
+            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="underline hover:text-amber-300"
           >
-            Video Creator
+            {currentLangKey === 'en' ? 'Varanasi Tourism' : 'वाराणसी पर्यटन'}
           </a>
         </div>
       </div>
 
       {/* City Selector */}
-      <div className="p-2 bg-[#EFE4D2] rounded-md shadow-md max-w-full mx-auto mt-6 mb-4">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          Select Your City for Services
-        </h1>
+      <CitySelector cities={cities} language={language} onSelectCity={setSelectedCity} selectedCity={selectedCity} />
 
-        <div className="flex space-x-4 overflow-x-auto scrollbar-hide py-4">
-          {cities.map((city, index) => (
-            <div
-              key={index}
-              className="min-w-[150px] bg-gray-100 rounded-lg shadow hover:shadow-lg cursor-pointer transition-transform transform hover:scale-105"
-            >
-              <img
-                src={city.image}
-                alt={city.name}
-                className="w-full h-40 object-cover rounded-t-lg"
-              />
-              <div className="text-center font-medium">{city.name}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Temple Cards */}
-      <div className="py-12 px-6 bg-[#FCEFCB]">
-        <h2 className="text-3xl font-semibold text-center text-gray-800 mb-8">
-          Explore the Divine Temples
+      {/* Temple Cards Section */}
+      <div className="py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#FCEFCB]">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">
+          {currentLangKey === 'en' ? 'Explore the Divine Temples' : 'दिव्य मंदिरों का अन्वेषण करें'}
         </h2>
-        <div className="flex flex-wrap justify-center gap-10">
-          {templeData.map((temple, index) => (
-            <div key={index} className="hover:scale-[1.02] transition-transform">
-              <DarshanCard
-                imageUrl={temple.imageUrl}
-                templeName={temple.templeName}
-                location={temple.location}
-                description={temple.description}
-              />
-            </div>
-          ))}
-        </div>
+        <p className="text-center text-base sm:text-lg text-gray-600 mb-12 max-w-3xl mx-auto font-medium">
+          {introLines[currentLangKey]}
+        </p>
+
+        {filteredTemples.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8 justify-items-center max-w-7xl mx-auto">
+            {filteredTemples.map((temple, index) => (
+              <div
+                key={index}
+                className="w-full max-w-xs hover:scale-[1.02] transition-transform duration-200 ease-in-out"
+              >
+                <DarshanCard
+                  imageUrl={temple.imageUrl}
+                  templeName={temple.templeName[currentLangKey]}
+                  location={temple.location[currentLangKey]}
+                  description={temple.description[currentLangKey]}
+                />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-center text-xl text-gray-600">
+            {currentLangKey === 'en' ? 'No temples found for the selected city.' : 'चयनित शहर के लिए कोई मंदिर नहीं मिला।'}
+          </p>
+        )}
       </div>
 
       <Footer />

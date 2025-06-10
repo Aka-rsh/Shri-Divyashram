@@ -2,13 +2,36 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
     "aos": "^2.3.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "helmet": "^8.1.0",
     "lottie-react": "^2.4.1",
+    "razorpay": "^2.9.6",
     "react": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.1"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0"
-  }
+  },
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aka-rsh/Shri-Divyashram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aka-rsh/Shri-Divyashram/issues"
+  },
+  "homepage": "https://github.com/Aka-rsh/Shri-Divyashram#readme"
 }

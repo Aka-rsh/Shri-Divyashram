@@ -4,17 +4,17 @@ import Navbar from './Navbar';
 const cabOptions = [
   {
     name: 'Local City Tour',
-    image: './Photos/cab-local.jpg', // Replace with actual path
+    image: './Varanasi/LocalC.jpg', // Replace with actual path
     description: 'Explore Varanasi comfortably with a full-day cab service. Includes popular temples, ghats, and markets.',
   },
   {
     name: 'Airport Pickup & Drop',
-    image: './Photos/cab-airport.jpg', // Replace with actual path
+    image: './Varanasi/Airport.jpg', // Replace with actual path
     description: 'Convenient airport transfers from Lal Bahadur Shastri Airport (VNS) to any location in Varanasi.',
   },
   {
     name: 'Outstation Travel',
-    image: './Photos/cab-outstation.jpg', // Replace with actual path
+    image: './Photos/cabbooking.png', // Replace with actual path
     description: 'Plan trips to Prayagraj, Ayodhya, or Bodh Gaya with our reliable outstation cab service.',
   }
 ];

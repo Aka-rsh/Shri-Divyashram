@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Homee from "./Homee";
 import Prasad from "./Prasad";
@@ -16,25 +16,51 @@ import Blog from "./Blog";
 import ContactUs from "./ContactUs";
 
 function App() {
+  const [language, setLanguage] = useState("EN"); // EN or HI
+
   return (
     <Router>
-      <div className="min-h-screen font-inter">
+      <div className="min-h-screen font-inter relative">
+        {/* Language Selection Buttons */}
+<div className="fixed top-130 left-5 z-50 flex flex-row space-x-2 sm:flex-col sm:space-x-0 sm:space-y-2">
+  <button
+    onClick={() => setLanguage("EN")}
+    className={`px-4 py-2 rounded font-semibold shadow cursor-pointer transition-colors duration-300 ${
+      language === "EN"
+        ? "bg-yellow-500 text-black"
+        : "bg-yellow-300 text-gray-700 hover:bg-yellow-400"
+    }`}
+  >
+    English
+  </button>
+  <button
+    onClick={() => setLanguage("HI")}
+    className={`px-4 py-2 rounded font-semibold shadow cursor-pointer transition-colors duration-300 ${
+      language === "HI"
+        ? "bg-yellow-500 text-black"
+        : "bg-yellow-300 text-gray-700 hover:bg-yellow-400"
+    }`}
+  >
+    हिन्दी
+  </button>
+</div>
+
         <Routes>
-          <Route path="/" element={<Homee />} />
+          <Route path="/" element={<Homee language={language} />} />
           <Route path="/Homee" element={<Navigate to="/" />} />
-          <Route path="/Prasad" element={<Prasad />} />
-          <Route path="/tours" element={<Tours />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-          <Route path="/OurServices" element={<OurServices />} />
-          <Route path="/HotelBooking" element={<HotelBooking />} />
-          <Route path="/VipTicket" element={<VipTicket />} />
-          <Route path="/Fticket" element={<Fticket />} />
-          <Route path="/KashiDarshan" element={<KashiDarshan />} />
-          <Route path="/BoatBooking" element={<BoatBooking />} />
-          <Route path="/CabBooking" element={<CabBooking />} />
-          <Route path="/Mandir" element={<Mandir />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/ContactUs" element={<ContactUs />} />
+          <Route path="/Prasad" element={<Prasad language={language} />} />
+          <Route path="/tours" element={<Tours language={language} />} />
+          <Route path="/aboutus" element={<AboutUs language={language} />} />
+          <Route path="/OurServices" element={<OurServices language={language} />} />
+          <Route path="/HotelBooking" element={<HotelBooking language={language} />} />
+          <Route path="/VipTicket" element={<VipTicket language={language} />} />
+          <Route path="/Fticket" element={<Fticket language={language} />} />
+          <Route path="/KashiDarshan" element={<KashiDarshan language={language} />} />
+          <Route path="/BoatBooking" element={<BoatBooking language={language} />} />
+          <Route path="/CabBooking" element={<CabBooking language={language} />} />
+          <Route path="/Mandir" element={<Mandir language={language} />} />
+          <Route path="/Blog" element={<Blog language={language} />} />
+          <Route path="/ContactUs" element={<ContactUs language={language} />} />
           <Route
             path="*"
             element={
@@ -50,29 +76,12 @@ function App() {
           href="https://wa.me/917007094655"
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            width: "60px",
-            height: "60px",
-            borderRadius: "50%",
-            background: "#25d366",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
-            zIndex: 1000,
-          }}
+          className="fixed bottom-5 right-5 w-[60px] h-[60px] rounded-full bg-[#25d366] shadow-lg z-50 flex items-center justify-center"
         >
           <img
             src="./Photos/Whatsapp.png"
             alt="WhatsApp"
-            style={{
-              width: "30px",
-              height: "30px",
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-            }}
+            className="w-[30px] h-[30px]"
           />
         </a>
       </div>
