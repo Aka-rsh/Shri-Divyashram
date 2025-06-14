@@ -106,7 +106,7 @@ const Aboutus = () => {
 },
     {
   name: "AJAY KUSHWAHA",
-  image: "./Profiles/Ajay-Kushwaha.jpg",
+  image: "./Profiles/Ajay-kushwaha.jpg",
   position: "Vice President",
   shortDescription:
     "Shri Ajay is a highly skilled finance professional with a strong background in business management and commerce. He holds an MBA from UPTU, Lucknow and an M.Com from Purvanchal University, Jaunpur. With over two decades of experience, he currently serves as the Finance Head at a multinational company in India. Additionally, Ajay has been deeply involved in spiritual and social work, actively contributing to various organizations across India.",
