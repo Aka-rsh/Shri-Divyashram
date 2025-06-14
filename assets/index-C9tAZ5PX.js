@@ -161,7 +161,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
     <p>
       Shri Ajay’s work reflects a balanced blend of professional excellence and a deep commitment to social and spiritual causes, inspiring countless individuals across India.
     </p>
-  `},{name:"MRS. MEENA SINGH",image:"./Profiles/Meena-Singh.jpg",position:"Director – Human Resources",shortDescription:"Mrs. Meena Singh is a dynamic and results-driven HR leader with over two decades of experience in executing transformative HR strategies aligned with business goals. She is known for driving organizational effectiveness and optimizing talent acquisition, employee engagement, and HR operations across sectors like FMCG, Telecom, BFSI, and Defence.",fullDescription:`
+  `},{name:"MEENA SINGH",image:"./Profiles/Meena-Singh.jpg",position:"Director – Human Resources",shortDescription:"Mrs. Meena Singh is a dynamic and results-driven HR leader with over two decades of experience in executing transformative HR strategies aligned with business goals. She is known for driving organizational effectiveness and optimizing talent acquisition, employee engagement, and HR operations across sectors like FMCG, Telecom, BFSI, and Defence.",fullDescription:`
     <p>🔷 <strong>Full Biography</strong></p>
     <p>
       Mrs. Meena Singh is a strategic HR professional with a proven record of success in implementing end-to-end HR solutions. With expertise in talent management, change management, succession planning, M&A integration, and performance-driven employee relations, she has contributed to notable organizations such as Akshat Group, SAHIT Enterprises, and Ujala Credit Co-op Society. She excels in SAP and ERP HR modules and has led initiatives reducing hiring costs and redesigning compensation frameworks.
@@ -198,7 +198,7 @@ Please change the parent <Route path="${Y}"> to <Route path="${Y==="/"?"*":`${Y}
       🔗 <strong>LinkedIn:</strong> 
       <a href="https://www.linkedin.com/in/meena-singh-16165615" target="_blank">Meena Singh on LinkedIn</a>
     </p>
-  `},{name:"MRS. POOJA SRIVASTAVA",image:"./Profiles/Pooja-Srivastava.jpg",position:"Consultant",shortDescription:"Mrs. Pooja Srivastava is a highly accomplished professional with a strong academic foundation in business, commerce, and finance. A native of Varanasi, she holds an M.Com and MBA, combining academic excellence with real-world experience as an entrepreneur and advisor. She also possesses certifications in computer applications from reputed institutions.",fullDescription:`
+  `},{name:"POOJA SRIVASTAVA",image:"./Profiles/Pooja-Srivastava.jpg",position:"Consultant",shortDescription:"Mrs. Pooja Srivastava is a highly accomplished professional with a strong academic foundation in business, commerce, and finance. A native of Varanasi, she holds an M.Com and MBA, combining academic excellence with real-world experience as an entrepreneur and advisor. She also possesses certifications in computer applications from reputed institutions.",fullDescription:`
     <p>🔷 <strong>Full Biography</strong></p>
     <p>
       Born on June 28, 1982, Mrs. Pooja Srivastava is an experienced entrepreneur and strategic advisor. With her educational expertise in commerce and business administration, she has successfully guided organizations in their growth journeys. Her leadership approach emphasizes discipline, clarity, and long-term sustainability.
