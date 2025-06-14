@@ -119,7 +119,7 @@ const Footer = () => {
 
         {/* Footer Bottom Text */}
         <div className="text-center text-sm text-stone-200">
-          <p>© 2025 | All Rights Reserved. Designed by Akarsh Srivastava & Saurav Chaurasiya.</p>
+          <p>© 2025 | All Rights Reserved. Designed by Akarsh Srivastava & Saurav</p>
         </div>
       </footer>
     </section>
