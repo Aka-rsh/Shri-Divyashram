@@ -10,6 +10,11 @@ const prasadItems = [
   { en: 'Mahadev Bhasm (Bhabhut)', hi: 'महादेव भस्म (भभूत)', image: './Varanasi/Bhasma.png' },
   { en: 'Sankat Mochan Prasad', hi: 'संकट मोचन प्रसाद', image: './Varanasi/SankatMochanPrasad.jpeg' },
   { en: 'Kal Bhairav Prasad + Ganda', hi: 'काल भैरव प्रसाद + गंडा', image: './Varanasi/KalBhairavPrasadband.jpeg' },
+  {
+  en: 'Free Free Free – only collection and delivery charges included',
+  hi: 'बिल्कुल मुफ़्त – केवल संग्रह और डिलीवरी शुल्क शामिल हैं',
+  image: './Photos/Free.png'
+  }
 ];
 
 const Prasad = ({ language }) => {
@@ -27,7 +32,7 @@ const Prasad = ({ language }) => {
                         border-2 border-white transform hover:scale-105 transition-transform duration-200 ease-in-out
                         max-w-[160px] sm:max-w-[220px] md:max-w-[280px] lg:max-w-xs mx-auto">
           <span className="block text-xs sm:text-sm md:text-base leading-tight">
-            {currentLangKey === 'en' ? 'Complete Divine Prasad Pack' : 'संपूर्ण दिव्य प्रसाद पैकेज'}
+            {currentLangKey === 'en' ? 'Free Free Free only collecting charge include ' : "मुफ़्त मुफ़्त मुफ़्त – केवल संग्रह शुल्क शामिल है"}
           </span>
           <span className="block text-lg sm:text-xl md:text-2xl mt-1 leading-none">
             {currentLangKey === 'en' ? 'Only ₹501!' : 'केवल ₹501 में!'}

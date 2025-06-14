@@ -12,7 +12,7 @@ import KashiDarshan from "./KashiDarshan";
 import BoatBooking from "./BoatBooking";
 import CabBooking from "./CabBooking";
 import Mandir from "./Mandir";
-import Blog from "./Blog";
+import Aarti from "./Aarti";
 import ContactUs from "./ContactUs";
 
 function App() {
@@ -59,7 +59,8 @@ function App() {
           <Route path="/BoatBooking" element={<BoatBooking language={language} />} />
           <Route path="/CabBooking" element={<CabBooking language={language} />} />
           <Route path="/Mandir" element={<Mandir language={language} />} />
-          <Route path="/Blog" element={<Blog language={language} />} />
+          <Route path="/aarti" element={<Aarti language={language} />} />
+
           <Route path="/ContactUs" element={<ContactUs language={language} />} />
           <Route
             path="*"

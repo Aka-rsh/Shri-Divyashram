@@ -20,27 +20,26 @@ const Navbar = () => {
   // For better desktop dropdown control - delay hiding dropdown
   const dropdownTimeoutRef = useRef(null);
 
-  const navLinks = [
-    { icon: <FaHome />, text: "Home", path: "/Homee" },
-    { icon: <FaHandHoldingHeart />, text: "Bhog/Prasad", path: "/Prasad" },
-    { icon: <FaHandHoldingHeart />, text: "Tours", path: "/tours" },
-    {
-      icon: <FaHandHoldingHeart />,
-      text: "OurServices",
-      path: "/OurServices",
-      children: [
-        { text: "🏨 Hotel Booking", path: "/HotelBooking" },
-        { text: "🚖 Cab Booking", path: "/CabBooking" },
-        { text: "🛕 VIP Darshan Ticket", path: "/VipTicket" },
-        { text: "✈ Flight Ticket", path: "/Fticket" },
-        { text: "🚉 Train Ticket", path: "/Fticket" },
-      ],
-    },
-    { icon: <FaLock />, text: "Mandir", path: "/Mandir" },
-    { icon: <FaFileSignature />, text: "Blogs", path: "/Blog" },
-    { icon: <FaUsers />, text: "About Us", path: "/aboutus" },
-    { icon: <FaPhoneAlt />, text: "Contact Us", path: "/ContactUs" },
-  ];
+const navLinks = [
+  { text: "Home", path: "/Homee" },
+  { text: "About Us", path: "/aboutus" },
+  { text: "Bhog/Prasad", path: "/Prasad" },
+  { text: "Tours", path: "/tours" },
+  {
+    text: "Our Services",
+    path: "/OurServices",
+    children: [
+      { text: "Hotel Booking", path: "/HotelBooking" },
+      { text: "Cab Booking", path: "/CabBooking" },
+      { text: "VIP Darshan Ticket", path: "/VipTicket" },
+      { text: "Flight Ticket", path: "/Fticket" },
+      { text: "Train Ticket", path: "/Fticket" },
+    ],
+  },
+  { text: "Mandir", path: "/Mandir" },
+  { text: "Contact Us", path: "/ContactUs" },
+];
+
 
   // Handlers to show dropdown on desktop, with delay hiding to fix flickering
   const handleMouseEnter = () => {

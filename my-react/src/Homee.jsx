@@ -10,6 +10,30 @@ const Homee = ({ language }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const scrollRef = useRef(null);
 
+  const ritualCards = [
+    {
+      title: 'Aarti',
+      subtitle: 'A divine ceremony by the sacred river',
+      image: './Varanasi/Aarti.png',
+      alt: 'Aarti ceremony view',
+      link: '/aarti', // or full URL like 'https://example.com/aarti'
+    },
+    {
+      title: 'Chalisa Recital',
+      subtitle: 'Powerful verses for strength and devotion',
+      image: './Varanasi/Chalisa.png',
+      alt: 'Reading Hanuman Chalisa',
+      link: '/chalisa',
+    },
+    {
+      title: 'Mantra Chanting',
+      subtitle: 'Sacred vibrations for inner peace',
+      image: './Varanasi/Aartiview.jpg',
+      alt: 'Chanting sacred mantras',
+      link: '/mantra',
+    },
+  ];
+
   // Define content for both languages
   const content = {
     EN: {
@@ -49,8 +73,7 @@ const Homee = ({ language }) => {
       hotels: "Hotels",
       boating: "Boating",
       cabBooking: "Cab Booking",
-      joinCommunity: "Join Our Community",
-      joinCommunityDescription: `Be a part of something greater — a movement rooted in tradition, compassion, and service. Whether you’re a student, a volunteer, a donor, or a supporter of Sanatan Dharma, your presence matters. Connect with us to grow spiritually, serve selflessly, and uplift lives together.`,
+      joinCommunity: `Be a part of something greater — a movement rooted in tradition, compassion, and service. Whether you’re a student, a volunteer, a donor, or a supporter of Sanatan Dharma, your presence matters. Connect with us to grow spiritually, serve selflessly, and uplift lives together.`,
       joinNow: "Join Now",
       communitySays: "What Our Community Says",
       feedback1: {
@@ -107,8 +130,7 @@ const Homee = ({ language }) => {
       hotels: "होटल",
       boating: "नौका विहार",
       cabBooking: "कैब बुकिंग",
-      joinCommunity: "हमारे समुदाय में शामिल हों",
-      joinCommunityDescription: `कुछ बड़ा का हिस्सा बनें — परंपरा, करुणा और सेवा में निहित एक आंदोलन। चाहे आप एक छात्र हों, एक स्वयंसेवक हों, एक दाता हों, या सनातन धर्म के समर्थक हों, आपकी उपस्थिति मायने रखती है। आध्यात्मिक रूप से बढ़ने, निःस्वार्थ भाव से सेवा करने और साथ मिलकर जीवन उत्थान करने के लिए हमसे जुड़ें।`,
+      joinCommunity: `कुछ बड़ा का हिस्सा बनें — परंपरा, करुणा और सेवा में निहित एक आंदोलन। चाहे आप एक छात्र हों, एक स्वयंसेवक हों, एक दाता हों, या सनातन धर्म के समर्थक हों, आपकी उपस्थिति मायने रखती है। आध्यात्मिक रूप से बढ़ने, निःस्वार्थ भाव से सेवा करने और साथ मिलकर जीवन उत्थान करने के लिए हमसे जुड़ें।`,
       joinNow: "अभी शामिल हों",
       communitySays: "हमारा समुदाय क्या कहता है",
       feedback1: {
@@ -168,22 +190,11 @@ const Homee = ({ language }) => {
             <h2 className="text-4xl text-amber-500 md:text-5xl font-extrabold mb-4 leading-tight">
               {currentContent.welcome}
             </h2>
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed whitespace-pre-line break-words">
-              {currentContent.welcomeDescription.split('<span').map((part, index, arr) => {
-                if (index === 0) return part;
-                const [tagContent, rest] = part.split('>', 1);
-                const [word, afterWord] = rest.split('</span', 1);
-                const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-                const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-                return (
-                  <span key={index} className={`${fontClass} text-[${colorClass}]`}>
-                    {word}
-                    {afterWord.split('</span')[1]}
-                  </span>
-                );
-              })}
-            </p>
+            {/* Using dangerouslySetInnerHTML for welcomeDescription */}
+            <p
+              className="text-lg md:text-xl text-gray-700 leading-relaxed whitespace-pre-line break-words"
+              dangerouslySetInnerHTML={{ __html: currentContent.welcomeDescription }}
+            />
           </div>
 
           <div className="md:w-1/2 flex flex-col items-center md:items-end text-center md:text-right">
@@ -256,6 +267,8 @@ const Homee = ({ language }) => {
         </section>
       </div>
 
+      ---
+
       {/* Service Section */}
       <div className="flex flex-col justify-center bg-[#A7C1A8] w-full py-12 px-4 mb-8">
         <h1 className="text-4xl text-center underline underline-offset-8 decoration-black mb-10 font-bold tracking-wide">
@@ -317,41 +330,19 @@ const Homee = ({ language }) => {
         </div>
       </div>
 
+      ---
+
       {/* Join Our Community Section */}
       <div className="bg-yellow-200 rounded-lg shadow-md p-6 md:p-8 mb-8 mx-4 md:mx-auto max-w-5xl overflow-x-hidden">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center text-orange-800 mb-4">
-          {currentContent.joinCommunity.split('<span').map((part, index, arr) => {
-            if (index === 0) return part;
-            const [tagContent, rest] = part.split('>', 1);
-            const [word, afterWord] = rest.split('</span', 1);
-            const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-            const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-            return (
-              <span key={index} className={`${fontClass} ${colorClass}`}>
-                {word}
-                {afterWord.split('</span')[1]}
-              </span>
-            );
-          })}
+          {/* Using dangerouslySetInnerHTML for joinCommunity title */}
+          <span dangerouslySetInnerHTML={{ __html: currentContent.joinCommunity }} />
         </h2>
 
-        <p className="text-lg leading-relaxed text-yellow-900 text-center max-w-3xl mx-auto">
-          {currentContent.joinCommunityDescription.split('<span').map((part, index, arr) => {
-            if (index === 0) return part;
-            const [tagContent, rest] = part.split('>', 1);
-            const [word, afterWord] = rest.split('</span', 1);
-            const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-            const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-            return (
-              <span key={index} className={`${fontClass} ${colorClass}`}>
-                {word}
-                {afterWord.split('</span')[1]}
-              </span>
-            );
-          })}
-        </p>
+        <p
+          className="text-lg leading-relaxed text-yellow-900 text-center max-w-3xl mx-auto"
+          dangerouslySetInnerHTML={{ __html: currentContent.joinCommunityDescription }}
+        />
 
         {/* Optional Call to Action Button */}
         <div className="mt-6 text-center">
@@ -360,6 +351,8 @@ const Homee = ({ language }) => {
           </button>
         </div>
       </div>
+
+      ---
 
       {/* Client Feedback Section */}
       <div className="bg-amber-100 rounded-lg shadow-md p-6 md:p-10 mb-10 mx-4 md:mx-auto max-w-6xl overflow-x-hidden">
@@ -371,90 +364,64 @@ const Homee = ({ language }) => {
 
           {/* Feedback 1 - Volunteer */}
           <div className="bg-white border-l-4 border-amber-600 p-6 rounded-lg shadow-md">
-            <p className="text-lg text-gray-800 italic leading-relaxed">
-              {currentContent.feedback1.text.split('<span').map((part, index, arr) => {
-                if (index === 0) return part;
-                const [tagContent, rest] = part.split('>', 1);
-                const [word, afterWord] = rest.split('</span', 1);
-                const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-                const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-                return (
-                  <span key={index} className={`${fontClass} ${colorClass}`}>
-                    {word}
-                    {afterWord.split('</span')[1]}
-                  </span>
-                );
-              })}
-            </p>
+            {/* Using dangerouslySetInnerHTML for feedback text */}
+            <p
+              className="text-lg text-gray-800 italic leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: currentContent.feedback1.text }}
+            />
             <p className="mt-4 text-right font-semibold text-yellow-900">— {currentContent.feedback1.author}</p>
           </div>
 
           {/* Feedback 2 - Donor */}
           <div className="bg-white border-l-4 border-orange-700 p-6 rounded-lg shadow-md">
-            <p className="text-lg text-gray-800 italic leading-relaxed">
-              {currentContent.feedback2.text.split('<span').map((part, index, arr) => {
-                if (index === 0) return part;
-                const [tagContent, rest] = part.split('>', 1);
-                const [word, afterWord] = rest.split('</span', 1);
-                const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-                const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-                return (
-                  <span key={index} className={`${fontClass} ${colorClass}`}>
-                    {word}
-                    {afterWord.split('</span')[1]}
-                  </span>
-                );
-              })}
-            </p>
+            {/* Using dangerouslySetInnerHTML for feedback text */}
+            <p
+              className="text-lg text-gray-800 italic leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: currentContent.feedback2.text }}
+            />
             <p className="mt-4 text-right font-semibold text-yellow-900">— {currentContent.feedback2.author}</p>
           </div>
 
           {/* Feedback 3 - Spiritual Seeker */}
           <div className="bg-white border-l-4 border-yellow-600 p-6 rounded-lg shadow-md">
-            <p className="text-lg text-gray-800 italic leading-relaxed">
-              {currentContent.feedback3.text.split('<span').map((part, index, arr) => {
-                if (index === 0) return part;
-                const [tagContent, rest] = part.split('>', 1);
-                const [word, afterWord] = rest.split('</span', 1);
-                const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-                const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-                return (
-                  <span key={index} className={`${fontClass} ${colorClass}`}>
-                    {word}
-                    {afterWord.split('</span')[1]}
-                  </span>
-                );
-              })}
-            </p>
+            {/* Using dangerouslySetInnerHTML for feedback text */}
+            <p
+              className="text-lg text-gray-800 italic leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: currentContent.feedback3.text }}
+            />
             <p className="mt-4 text-right font-semibold text-yellow-900">— {currentContent.feedback3.author}</p>
           </div>
 
           {/* Feedback 4 - Visitor */}
           <div className="bg-white border-l-4 border-red-700 p-6 rounded-lg shadow-md">
-            <p className="text-lg text-gray-800 italic leading-relaxed">
-              {currentContent.feedback4.text.split('<span').map((part, index, arr) => {
-                if (index === 0) return part;
-                const [tagContent, rest] = part.split('>', 1);
-                const [word, afterWord] = rest.split('</span', 1);
-                const colorClass = tagContent.match(/text-\[([^\]]+)\]/)?.[1] || '';
-                const fontClass = tagContent.includes('font-bold') ? 'font-bold' : tagContent.includes('font-semibold') ? 'font-semibold' : '';
-
-                return (
-                  <span key={index} className={`${fontClass} ${colorClass}`}>
-                    {word}
-                  </span>
-                );
-              })}
-            </p>
+            {/* Using dangerouslySetInnerHTML for feedback text */}
+            <p
+              className="text-lg text-gray-800 italic leading-relaxed"
+              dangerouslySetInnerHTML={{ __html: currentContent.feedback4.text }}
+            />
             <p className="mt-4 text-right font-semibold text-yellow-900">— {currentContent.feedback4.author}</p>
           </div>
 
         </div>
       </div>
 
+      ---
+
+      <div className="ml-3 mb-10">
+        <h2 className="text-center text-3xl font-bold mb-8">
+          Sacred Rituals and Devotional Practices
+        </h2>
+
+        <div className="flex flex-wrap justify-around gap-y-10 gap-x-6">
+          {ritualCards.map((card, index) => (
+            <Link key={index} to={card.link} className="w-40 block text-black no-underline hover:opacity-90 transition">
+              <img src={card.image} alt={card.alt} className="object-cover w-full h-40 rounded" />
+              <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
+              <h3 className="text-sm text-gray-600">{card.subtitle}</h3>
+            </Link>
+          ))}
+        </div>
+      </div>
 
       <Footer />
     </>

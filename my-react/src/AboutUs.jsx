@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Aboutus = () => {
   const teamMembers = [
 {
-  name: "SHRI VIRENDRA KUMAR",
+  name: "VIRENDRA KUMAR",
   image: "./Profiles/Virendra-Srivastava.jpg",
   position: "President",
   shortDescription:
@@ -47,7 +47,7 @@ const Aboutus = () => {
 },
 
 {
-  name: "SHRI SANJAY KESHARI",
+  name: "SANJAY KESHARI",
   image: "./Profiles/Sanjay-Keshari.jpg",            
   position: "Secretary",
   shortDescription:
@@ -75,7 +75,7 @@ const Aboutus = () => {
   `,
 },
     {
-  name: "SHRI SIDHARTHA PANDEY",
+  name: "SIDHARTHA PANDEY",
   image: "./Profiles/Sidhartha-Pandey.jpg",
   position: "Treasurer",
   shortDescription:
@@ -105,7 +105,7 @@ const Aboutus = () => {
   `,
 },
     {
-  name: "SHRI AJAY KUSHWAHA",
+  name: "AJAY KUSHWAHA",
   image: "./Profiles/Ajay-Kushwaha.jpg",
   position: "Vice President",
   shortDescription:
@@ -196,7 +196,7 @@ const Aboutus = () => {
     {
   name: "MRS. POOJA SRIVASTAVA",
   image: "./Profiles/Pooja-Srivastava.jpg",
-  position: "Advisor",
+  position: "Consultant",
   shortDescription:
     "Mrs. Pooja Srivastava is a highly accomplished professional with a strong academic foundation in business, commerce, and finance. A native of Varanasi, she holds an M.Com and MBA, combining academic excellence with real-world experience as an entrepreneur and advisor. She also possesses certifications in computer applications from reputed institutions.",
   fullDescription: `
@@ -229,7 +229,7 @@ const Aboutus = () => {
 {
   name: "Dr. Arvind Keshari",
   image: "./Profiles/Dr-Arvind-keshari .jpg",
-  position: "Senior Advisor",
+  position: "Senior Consultant",
   shortDescription:
     "Dr. Arvind Keshari, born on September 12, 1970, is a BAMS medical graduate and a well-renowned social welfare activist and community leader from Varanasi. With decades of hands-on experience in healthcare outreach, education, and grassroots development, he has dedicated his life to uplifting underserved communities through various civic and humanitarian initiatives.",
 
