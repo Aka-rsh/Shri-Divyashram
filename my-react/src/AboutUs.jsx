@@ -6,7 +6,7 @@ import Footer from "./Footer";
 const Aboutus = () => {
   const teamMembers = [
 {
-  name: "VIRENDRA KUMAR",
+  name: "VIRENDRA KUMAR SRIVASTAVA",
   image: "./Profiles/Virendra-Srivastava.jpg",
   position: "President",
   shortDescription:
@@ -149,7 +149,7 @@ const Aboutus = () => {
 },
 
     {
-  name: "MRS. MEENA SINGH",
+  name: "MEENA SINGH",
   image: "./Profiles/Meena-Singh.jpg",
   position: "Director – Human Resources",
   shortDescription:
@@ -194,7 +194,7 @@ const Aboutus = () => {
   `
 },
     {
-  name: "MRS. POOJA SRIVASTAVA",
+  name: "POOJA SRIVASTAVA",
   image: "./Profiles/Pooja-Srivastava.jpg",
   position: "Consultant",
   shortDescription:
@@ -227,7 +227,7 @@ const Aboutus = () => {
   `
 },
 {
-  name: "Dr. Arvind Keshari",
+  name: "DR. ARVIND KESHARI",
   image: "./Profiles/Dr-Arvind-keshari .jpg",
   position: "Senior Consultant",
   shortDescription:
