@@ -405,7 +405,7 @@ const Homee = ({ language }) => {
         </div>
       </div>
 
-      ---
+    {/* Aarti */}
 
       <div className="ml-3 mb-10">
         <h2 className="text-center text-3xl font-bold mb-8">
@@ -414,7 +414,7 @@ const Homee = ({ language }) => {
 
         <div className="flex flex-wrap justify-around gap-y-10 gap-x-6">
           {ritualCards.map((card, index) => (
-            <Link key={index} to={card.link} className="w-40 block text-black no-underline hover:opacity-90 transition">
+            <Link key={index} to={card.link} className="w-60 h-60 block text-black no-underline hover:opacity-90 transition">
               <img src={card.image} alt={card.alt} className="object-cover w-full h-40 rounded" />
               <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
               <h3 className="text-sm text-gray-600">{card.subtitle}</h3>

@@ -12,8 +12,15 @@ import KashiDarshan from "./KashiDarshan";
 import BoatBooking from "./BoatBooking";
 import CabBooking from "./CabBooking";
 import Mandir from "./Mandir";
-import Aarti from "./Aarti";
 import ContactUs from "./ContactUs";
+import Aarti from "./Aarti";
+import ShakambhariJiAarti from "./ShakambhariJiAarti";
+import VishwakarmaJiAarti from "./VishwakarmajiAarti";
+import KartikeyaJiAarti from "./KartikeyaJiAarti";
+import KaliMataAarti from "./KaliMataAarti";
+import GaneshaJiAarti from "./GaneshJiAarti";
+import DattatreyaAarti from "./DattatreyaAarti";
+import AnnapurnaMataAarti from "./AnnapurnaMataAarti";
 
 function App() {
   const [language, setLanguage] = useState("EN"); // EN or HI
@@ -59,8 +66,14 @@ function App() {
           <Route path="/BoatBooking" element={<BoatBooking language={language} />} />
           <Route path="/CabBooking" element={<CabBooking language={language} />} />
           <Route path="/Mandir" element={<Mandir language={language} />} />
-          <Route path="/aarti" element={<Aarti language={language} />} />
-
+          <Route path="/Aarti" element={<Aarti language={language} />} />
+          <Route path="/shakambhari-aarti" element={<ShakambhariJiAarti language={language} />} />
+          <Route path="/kartikeya-aarti" element={<KartikeyaJiAarti language={language} />} />
+          <Route path="/vishwakarma-aarti" element={<VishwakarmaJiAarti language={language} />} />
+          <Route path="/kaali-aarti" element={<KaliMataAarti language={language} />} /> 
+          <Route path="/ganesh-aarti" element={<GaneshaJiAarti language={language} />} />
+          <Route path="/dattatreya-aarti" element={<DattatreyaAarti language={language} />} />
+          <Route path="/annapurna-aarti" element={<AnnapurnaMataAarti language={language} />} />
           <Route path="/ContactUs" element={<ContactUs language={language} />} />
           <Route
             path="*"
