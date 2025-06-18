@@ -14,21 +14,21 @@ const Homee = ({ language }) => {
     {
       title: 'Aarti',
       subtitle: 'A divine ceremony by the sacred river',
-      image: './Varanasi/Aarti.png',
+      image: './Lord/AartiImg.jpg',
       alt: 'Aarti ceremony view',
       link: '/aarti', // or full URL like 'https://example.com/aarti'
     },
     {
       title: 'Chalisa Recital',
       subtitle: 'Powerful verses for strength and devotion',
-      image: './Varanasi/Chalisa.png',
+      image: './Lord/ChalishaImg.jpg',
       alt: 'Reading Hanuman Chalisa',
       link: '/chalisa',
     },
     {
       title: 'Mantra Chanting',
       subtitle: 'Sacred vibrations for inner peace',
-      image: './Varanasi/Aartiview.jpg',
+      image: './Lord/Mantra.jpg',
       alt: 'Chanting sacred mantras',
       link: '/mantra',
     },
@@ -405,23 +405,43 @@ const Homee = ({ language }) => {
         </div>
       </div>
 
-    {/* Aarti */}
+<div className="container mx-auto px-4 py-12"> {/* Added a container for better centering and padding */}
+  <h2 className="text-center text-4xl font-extrabold text-gray-800 mb-12 tracking-tight leading-tight"> {/* Larger, bolder, more refined heading */}
+    Sacred Rituals & Devotional Practices
+  </h2>
 
-      <div className="ml-3 mb-10">
-        <h2 className="text-center text-3xl font-bold mb-8">
-          Sacred Rituals and Devotional Practices
-        </h2>
-
-        <div className="flex flex-wrap justify-around gap-y-10 gap-x-6">
-          {ritualCards.map((card, index) => (
-            <Link key={index} to={card.link} className="w-60 h-60 block text-black no-underline hover:opacity-90 transition">
-              <img src={card.image} alt={card.alt} className="object-cover w-full h-40 rounded" />
-              <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
-              <h3 className="text-sm text-gray-600">{card.subtitle}</h3>
-            </Link>
-          ))}
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-between"> {/* Responsive grid for better layout */}
+    {ritualCards.map((card, index) => (
+      <Link
+        key={index}
+        to={card.link}
+        className="block group relative bg-white rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer"
+      >
+        <div className="relative w-full h-48"> {/* Image container for consistent sizing */}
+          <img
+            src={card.image}
+            alt={card.alt}
+            className="object-cover w-full h-full rounded-t-lg transition-transform duration-300 group-hover:scale-105"
+          />
+          {/* Optional: Overlay for hover effect or gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
-      </div>
+        <div className="p-4">
+          <h3 className="text-xl font-bold text-gray-900 mb-1 leading-tight"> {/* Larger, more prominent title */}
+            {card.title}
+          </h3>
+          <p className="text-sm text-gray-600"> {/* Use <p> for descriptive text */}
+            {card.subtitle}
+          </p>
+          {/* Optional: Add a subtle "Learn More" or arrow on hover */}
+          <span className="absolute bottom-4 right-4 text-sm text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Explore &rarr;
+          </span>
+        </div>
+      </Link>
+    ))}
+  </div>
+</div>
 
       <Footer />
     </>

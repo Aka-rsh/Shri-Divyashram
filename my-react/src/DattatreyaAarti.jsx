@@ -71,7 +71,7 @@ Grant us Your familiar presence. || Jai...
         <div className="w-full h-full">
           {/* Ensure this path points to your Dattatreya image */}
           <img
-            src="./Lord/Dattatreya Aarti.jpg" // **Update this path to your Dattatreya Ji image**
+            src="./Lord/DattatreyaJiAarti.jpg" // **Update this path to your Dattatreya Ji image**
             alt="Lord Dattatreya, the Trimurti, embodiment of Brahma, Vishnu, and Shiva."
             className="object-cover w-full h-full filter brightness-90"
             // object-cover (default object-position is center) will crop from top and bottom

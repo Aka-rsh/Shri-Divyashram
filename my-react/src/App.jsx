@@ -21,6 +21,33 @@ import KaliMataAarti from "./KaliMataAarti";
 import GaneshaJiAarti from "./GaneshJiAarti";
 import DattatreyaAarti from "./DattatreyaAarti";
 import AnnapurnaMataAarti from "./AnnapurnaMataAarti";
+import SuryajiAarti from "./SuryajiAarti";
+import HanumanJiAarti from "./HanumanJiAarti";
+import VishnuJiAarti from "./VishnuJiAarti";
+import ShivJiAarti from "./ShivJiAarti";
+import DurgaMaAarti from "./DurgaMaAarti";
+import ShaniJiAarti from "./ShaniJiAarti";
+import ShantadurgaJiAarti from "./ShantadurgaJiAarti";
+import Chalisha from "./Chalisha";
+import HanumanChalisha from "./HanumanChalisha";
+import DurgaJiChalisha from "./DurgaJiChalisha";
+import ShivJiChalisa from "./ShivJiChalisha";
+import LakshmiJiChalisha from "./LakshmiJiChalisha";
+import GaneshJiChalisha from "./GaneshJiChalisha";
+import ShriRamjiChalisha from "./ShriRamjiChalisha";
+import KrishnaJiChalisha from "./KrishnaJiChalisha";
+import VishnuJiChalisha from "./VishnuJiChalisha";
+import ShaniJiChalsiha from "./ShaniJiChalsiha";
+import SaraswatiJiChalisha from "./SaraswatiJiChalisha";
+import SuryaJiChalisha from "./SuryaJiChalisha";
+import RadhaJiChalisha from "./RadhaJiChalisha";
+import SaiBabaChalisha from "./SaiBabaChalisha";
+import NavgrahJiChalsiha from "./NavgrahJiChalsiha";
+import SheetlaJiChalisha from "./SheetlaJiChalisha";
+import KaaliJiChalisha from "./KaaliJiChalisha";
+import ChamundaJiChalisha from "./ChamundaJiChalisha";
+import GangaJiChalisa from "./GangaJiChalisha";
+import SantoshiJiChalisha from "./SantoshiJiChalisha";
 
 function App() {
   const [language, setLanguage] = useState("EN"); // EN or HI
@@ -74,6 +101,35 @@ function App() {
           <Route path="/ganesh-aarti" element={<GaneshaJiAarti language={language} />} />
           <Route path="/dattatreya-aarti" element={<DattatreyaAarti language={language} />} />
           <Route path="/annapurna-aarti" element={<AnnapurnaMataAarti language={language} />} />
+          <Route path="/surya-aarti" element={<SuryajiAarti language={language} />} />
+          <Route path="/hanuman-aarti" element={<HanumanJiAarti language={language} />} />
+          <Route path="/shiv-aarti" element={<ShivJiAarti language={language} />} />
+          <Route path="/durga-aarti" element={<DurgaMaAarti language={language} />} />
+          <Route path="/shani-aarti" element={<ShaniJiAarti language={language} />} />
+          <Route path="/shantadurga-aarti" element={<ShantadurgaJiAarti language={language} />} />
+          <Route path="/vishnu-aarti" element={<VishnuJiAarti language={language} />} />
+          <Route path="/chalisa" element={<Chalisha language={language} />} />
+          <Route path="/hanuman-chalisha" element={<HanumanChalisha language={language} />} />
+          <Route path="/durga-chalisha" element={<DurgaJiChalisha language={language} />} />
+          <Route path="/shiv-chalisha" element={<ShivJiChalisa language={language} />} />
+          <Route path="/lakshmi-chalisha" element={<LakshmiJiChalisha language={language} />} />
+          <Route path="/ganesh-chalisha" element={<GaneshJiChalisha language={language} />} />
+          <Route path="/ram-chalisha" element={<ShriRamjiChalisha language={language} />} />
+          <Route path="/krishna-chalisha" element={<KrishnaJiChalisha language={language} />} />
+          <Route path="/vishnu-chalisha" element={<VishnuJiChalisha language={language} />} />
+          <Route path="/shani-chalisha" element={<ShaniJiChalsiha language={language} />} />
+          <Route path="/saraswati-chalisha" element={<SaraswatiJiChalisha language={language} />} />
+          <Route path="/ganga-chalisha" element={<GangaJiChalisa language={language} />} />
+          <Route path="/surya-chalisha" element={<SuryaJiChalisha language={language} />} />
+           <Route path="/radha-chalisha" element={<RadhaJiChalisha language={language} />} />
+           <Route path="/sai-chalisha" element={<SaiBabaChalisha language={language} />} />
+           <Route path="/navgrah-chalisha" element={<NavgrahJiChalsiha language={language} />} />
+           <Route path="/sheetla-chalisha" element={<SheetlaJiChalisha language={language} />} />
+           <Route path="/kaali-chalisha" element={<KaaliJiChalisha language={language} />} />
+           <Route path="/santoshi-chalisha" element={<SantoshiJiChalisha language={language} />} />
+           <Route path="/chamunda-chalisha" element={<ChamundaJiChalisha language={language} />} /> 
+
+
           <Route path="/ContactUs" element={<ContactUs language={language} />} />
           <Route
             path="*"

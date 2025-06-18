@@ -10,21 +10,21 @@ const Aarti = ({ language = "EN" }) => { // Added language prop with default EN
     {
       name: "Morning Aarti",
       title: "Surya Ji Aarti",
-      img: "https://via.placeholder.com/400x300/FFD700/8B4513?text=Surya+Ji",
+      img: "./Lord/SuryaJiAarti.jpg",
       subtitle: "Dedicated to Lord Surya",
       link: "/surya-aarti"
     },
     {
       name: "Evening Aarti",
       title: "Shiv Ji Aarti",
-      img: "https://via.placeholder.com/400x300/A9A9A9/FFFFFF?text=Shiv+Ji",
+      img: "./Lord/ShivJiAarti.jpg",
       subtitle: "Dedicated to Lord Shiva",
       link: "/shiv-aarti"
     },
     {
       name: "Supreme Goddess",
       title: "Durga Mata Aarti",
-      img: "https://via.placeholder.com/400x300/FF6347/FFFFFF?text=Durga+Mata",
+      img: "./Lord/DurgaMataAarti.jpg",
       subtitle: "Aarti of Goddess Durga",
       link: "/durga-aarti"
     },
@@ -38,14 +38,14 @@ const Aarti = ({ language = "EN" }) => { // Added language prop with default EN
     {
       name: "Guru Aarti",
       title: "Dattatreya Ji Aarti",
-      img: "https://via.placeholder.com/400x300/8A2BE2/FFFFFF?text=Dattatreya+Ji",
+      img: "./Lord/DattatreyaJiAarti.jpg",
       subtitle: "Aarti of Lord Dattatreya",
       link: "/dattatreya-aarti"
     },
     {
       name: "Remover of Obstacles",
       title: "Ganesh Ji Aarti",
-      img: "./Lord/Ganesh-Aarti.jpg",
+      img: "./Lord/GaneshJiAarti.jpg",
       subtitle: "Aarti of Lord Ganesha",
       link: "/ganesh-aarti"
     },
@@ -80,24 +80,32 @@ const Aarti = ({ language = "EN" }) => { // Added language prop with default EN
     {
       name: "Protector God",
       title: "Hanuman Ji Aarti",
-      img: "https://via.placeholder.com/400x300/FF4500/FFFFFF?text=Hanuman+Ji",
+      img: "./Lord/HanumanJiAarti.jpg",
       subtitle: "Aarti of Lord Hanuman",
       link: "/hanuman-aarti"
     },
     {
       name: "Preserver of Universe",
       title: "Vishnu Ji Aarti",
-      img: "https://via.placeholder.com/400x300/4169E1/FFFFFF?text=Vishnu+Ji",
+      img: "./Lord/VishnuJiAarti.jpg",
       subtitle: "Aarti of Lord Vishnu",
       link: "/vishnu-aarti"
     },
     {
       name: "God of Justice",
       title: "Shani Ji Aarti",
-      img: "https://via.placeholder.com/400x300/1C0D30/FFFFFF?text=Shani+Ji",
+      img: "./Lord/ShaniJiAarti.jpg",
       subtitle: "Aarti of Lord Shani",
       link: "/shani-aarti"
     },
+    {
+      name: "Goddess of Peace",
+      title: "Shantadurga Mata Aarti",
+      img: "./Lord/ShantaDurgaMaAarti.jpg",
+      subtitle: "Aarti of Shantadurga Mata",
+      link: "/shantadurga-aarti"
+  }
+
   ];
 
   const content = {

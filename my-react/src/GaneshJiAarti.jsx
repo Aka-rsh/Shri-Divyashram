@@ -69,7 +69,7 @@ Victory to the Lord, victory to the Lord! || 4 ||
         <div className="w-full h-full">
           {/* Ensure this path points to your Ganesha image */}
           <img
-            src="./Lord/Ganesha Aarti.jpg" // **Update this path to your Ganesha Ji image**
+            src="./Lord/GaneshJiAarti.jpg" // **Update this path to your Ganesha Ji image**
             alt="Lord Ganesha, the remover of obstacles, adorned with a garland."
             className="object-cover w-full h-full filter brightness-90"
             // object-cover (default object-position is center) will crop from top and bottom
