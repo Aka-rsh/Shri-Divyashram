@@ -4,22 +4,22 @@ import Navbar from './Navbar';
 const boatOptions = [
   {
     name: 'Hand Boat',
-    image: './Photos/handboat.jpg', // Replace with actual path
+    image: './Varanasi/HandBoat.jpg', // Replace with actual path
     description: 'Perfect for a peaceful rowed experience during sunrise or Ganga Aarti. Ideal for solo travelers or small families.',
   },
   {
     name: 'Motorboat',
-    image: './Photos/motorboat.jpg', // Replace with actual path
+    image: './Varanasi/MotarBoat.jpg', // Replace with actual path
     description: 'Fast and efficient! Explore the Ganga ghats quickly with a motorboat – great for groups or short trips.',
   },
   {
     name: 'Bajra Boat',
-    image: './Photos/bajra.jpg', // Replace with actual path
+    image: './Varanasi/BajraBoat.jpg', // Replace with actual path
     description: 'Traditional wooden bajra boats offer a cultural and scenic ride, with canopy and seating — great for photography lovers.',
   },
   {
     name: 'Cruise',
-    image: './Photos/cruise.jpg', // Replace with actual path
+    image: './Varanasi/Cruise.jpg', // Replace with actual path
     description: 'Luxury experience on the Ganga with music, snacks, and panoramic views of the ghats. Ideal for families and events.',
   }
 ];

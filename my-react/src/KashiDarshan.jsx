@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import Navbar from "./Navbar";
 import DarshanCard from "./DarshanCard";
 import Footer from "./Footer";
+import { Link } from 'react-router-dom';
 
 
 const templeData = [
@@ -138,43 +139,52 @@ const services = [
     icon: "fa-solid fa-hotel",
     title: "Hotel Booking",
     desc: "Comfortable hotel stays close to temples and ghats.",
+    link: "/HotelBooking",
   },
   {
     icon: "fa-solid fa-taxi",
     title: "Airport Pickup and Drop",
     desc: "Reliable airport and station transfers across Varanasi.",
+    link: "/CabBooking",
   },
   {
     icon: "fa-solid fa-route",
     title: "Tour Packages",
     desc: "Customizable packages covering top Kashi attractions.",
+    link: "/tours",
   },
   {
     icon: "fa-solid fa-ticket",
     title: "VIP Darshan Ticket",
     desc: "Skip the lines and get premium darshan access.",
+    link: "/VipTicket",
   },
   {
     icon: "fa-solid fa-fire",
     title: "Ganga Aarti Ticket",
     desc: "Reserved seating for the spiritual Ganga Aarti experience.",
+    link: "/VipTicket",
   },
   {
     icon: "fa-solid fa-ship",
     title: "Boat Booking",
     desc: "Sunrise and evening boat rides on the holy Ganga.",
+    link: "/BoatBooking",
   },
   {
     icon: "fa-solid fa-plane-departure",
     title: "Flight Ticket",
     desc: "Domestic and international ticket booking support.",
+    link: "/Fticket",
   },
   {
     icon: "fa-solid fa-train-subway",
     title: "Train Ticket",
     desc: "Book train tickets for all major routes and schedules.",
+    link: "/Fticket",
   },
 ];
+
 
 const KashiDarshan = () => {
   const videoRef = useRef(null);
@@ -243,8 +253,8 @@ const KashiDarshan = () => {
           </a>
         </div>
       </div>
+      
 
-{/* Services Carousel */}
 <div className="bg-amber-300 px-2 sm:px-4 py-10">
   <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
     Our Services
@@ -253,19 +263,19 @@ const KashiDarshan = () => {
     ref={scrollRef}
     className="flex overflow-x-auto space-x-4 scrollbar-hide scroll-smooth snap-x snap-mandatory px-1"
   >
-    {services.map(({ icon, title, desc }, index) => (
+    {services.map(({ icon, title, desc, link }, index) => (
       <div
         key={index}
         className="bg-white rounded-xl shadow-md p-4 flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-80 snap-start hover:shadow-lg transition-all relative"
       >
-        {/* Replace "/your-new-page" with the actual target link for each service */}
-        <a
-          href="/your-new-page"
-          className="absolute top-2 right-2 text-xl font-bold text-gray-800 hover:text-gray-600 cursor-pointer"
-          aria-label={`Open new page for ${title}`}
-        >
-          +
-        </a>
+       <Link
+  to={link}
+  className="absolute top-2 right-2 text-xl font-bold text-gray-800 hover:text-gray-600 cursor-pointer"
+  aria-label={`Open new page for ${title}`}
+>
+  +
+</Link>
+
 
         <div className="text-3xl text-amber-500 mb-3">
           <i className={icon}></i>
@@ -276,6 +286,7 @@ const KashiDarshan = () => {
     ))}
   </div>
 </div>
+
 
 
       {/* Temple Cards */}

@@ -72,8 +72,6 @@ Victory to the Lord, victory to the Lord! || 4 ||
             src="./Lord/GaneshJiAarti.jpg" // **Update this path to your Ganesha Ji image**
             alt="Lord Ganesha, the remover of obstacles, adorned with a garland."
             className="object-cover w-full h-full filter brightness-90"
-            // object-cover (default object-position is center) will crop from top and bottom
-            // as needed to fill the banner while maintaining aspect ratio.
           />
         </div>
 

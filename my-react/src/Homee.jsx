@@ -282,7 +282,7 @@ const Homee = ({ language }) => {
               <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">{currentContent.kashiDarshan}</h2>
               <img
                 loading="lazy"
-                src="./Photos/p2.jpg"
+                src="./Varanasi/S1.jpg"
                 alt={currentContent.kashiDarshan}
                 className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
               />
@@ -295,7 +295,7 @@ const Homee = ({ language }) => {
               <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">{currentContent.hotels}</h2>
               <img
                 loading="lazy"
-                src="./Photos/p7.jpg"
+                src="./Varanasi/HotelBooking.jpg"
                 alt={currentContent.hotels}
                 className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
               />
@@ -308,7 +308,7 @@ const Homee = ({ language }) => {
               <h2 className="bg-[#D1D8BE] text-2xl text-center py-2">{currentContent.boating}</h2>
               <img
                 loading="lazy"
-                src="./Photos/v1.jpg"
+                src="./Varanasi/Boating.jpg"
                 alt={currentContent.boating}
                 className="object-cover w-full h-[250px] aspect-[4/3] bg-gray-200"
               />
