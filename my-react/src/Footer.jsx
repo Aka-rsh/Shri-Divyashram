@@ -63,7 +63,7 @@ const Footer = () => {
               <p className="text-base break-words">
                 <strong className="text-stone-200">Open Hours (Mon - Sat):</strong>
                 <br />
-                24×7 Available
+                24 hrs Available
               </p>
             </div>
           </div>

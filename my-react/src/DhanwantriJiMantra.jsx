@@ -12,19 +12,12 @@ const DhanwantriJiMantra = ({ language }) => {
 सर्वभय विनाशाय सर्वरोग निवारणाय त्रिलोकपथाय त्रिलोकनाथाय
 श्री महाविष्णवे नमः॥
 
-॥ Om Namo Bhagavate Mahāsudarshanāya Vāsudevāya Dhanvantaraye
-Amṛta-kalaśa-hastāya Sarva-bhaya-vināśāya Sarva-roga-nivāraṇāya
-Triloka-pathāya Triloka-nāthāya Śrī Mahā-Viṣṇave Namaḥ॥
-
 👉 भावार्थ:
 मैं भगवान धन्वंतरि को नमन करता हूँ, जिनके हाथों में अमृत कलश है, जो रोग और भय का नाश करते हैं, तीनों लोकों के पथ प्रदर्शक और भगवान विष्णु के स्वरूप हैं।
 
 2. धन्वंतरि गायत्री मंत्र:
 ॐ धन्वंतरये विद्महे। अमृततत्त्वाय धीमहि।
 तन्नो विष्णुः प्रचोदयात्॥
-
-Om Dhanvantaraye Vidmahe, Amrita-tattvaya Dhimahi,
-Tanno Vishnuh Prachodayat॥
 
 👉 भावार्थ:
 हम भगवान धन्वंतरि को जानते हैं, जो अमृत तत्व के रूप हैं। हम उनका ध्यान करते हैं, वे हमें सद्बुद्धि प्रदान करें।
@@ -33,6 +26,30 @@ Tanno Vishnuh Prachodayat॥
 - 📅 दिन: प्रतिदिन या विशेष रूप से धनतेरस, गुरुवार, या एकादशी को करें।
 - 📿 माला: तुलसी या रुद्राक्ष की माला से 108 बार जाप करें।
 - 🧘‍♂️ दिशा: पूर्व या उत्तर दिशा की ओर मुख करके बैठें।
+`;
+
+  const englishContent = `
+🧴 Dhanvantari Mantra Collection 🧴
+
+1. Shri Dhanvantari Beej Mantra:
+Om Namo Bhagavate Mahasudarshanaya Vasudevaya Dhanvantaraye Amritkalasha Hastaya
+Sarvabhaya Vinashaya Sarvaroga Nivaranaya Trilokapathaya Trilokanathaya
+Shri Mahavishnave Namah॥
+
+👉 Meaning:
+I bow to Lord Dhanvantari, who holds the pot of nectar, who destroys all fears and diseases, the guide of the three worlds, and the form of Lord Vishnu.
+
+2. Dhanvantari Gayatri Mantra:
+Om Dhanvantaraye Vidmahe, Amrita-Tattvaya Dhimahi,
+Tanno Vishnuh Prachodayat॥
+
+👉 Meaning:
+We know Lord Dhanvantari as the essence of immortality. We meditate upon Him. May Lord Vishnu inspire and guide us.
+
+📿 Chanting Guide:
+- 📅 Best Days: Daily, or especially on Dhanteras, Thursdays, or Ekadashi.
+- 📿 Mala: Use Tulsi or Rudraksha mala to chant 108 times.
+- 🧘‍♂️ Direction: Sit facing East or North while chanting.
 `;
 
   return (
@@ -58,7 +75,7 @@ Tanno Vishnuh Prachodayat॥
         <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-2xl border border-teal-200
                         transform hover:scale-[1.01] transition-transform duration-300 ease-in-out animate-fade-in">
           <pre className="whitespace-pre-wrap leading-relaxed text-base sm:text-lg md:text-xl font-serif text-gray-800">
-            {isHindi ? hindiContent : "English version coming soon..."}
+            {isHindi ? hindiContent : englishContent}
           </pre>
         </div>
       </div>

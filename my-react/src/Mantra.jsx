@@ -8,6 +8,20 @@ const Mantra = ({ language = "EN" }) => {
 
   const cardData = [
     {
+      name: "Sita Beej Mantra",
+      title: "Sita Ji Beej Mantra",
+      img: "./Lord/SitaBeejMantra.jpg",
+      subtitle: "Mantra dedicated to Goddess Sita",
+      link: "/sita-ji-beej-mantra"
+    },
+    {
+      name: "Ram Beej Mantra",
+      title: "Shri Ram Ji Beej Mantra",
+      img: "./Lord/ShriRamjiChalisha.jpg",
+      subtitle: "Mantra dedicated to Lord Shri Ram",
+      link: "/shri-ram-ji-beej-mantra"
+    },
+    {
       name: "Preserver Mantra",
       title: "Narayana Mantra",
       img: "./Lord/NarayanJiMantra.jpg",
@@ -55,6 +69,20 @@ const Mantra = ({ language = "EN" }) => {
       img: "./Lord/Krishnaji.jpg",
       subtitle: "Mantra of Lord Krishna",
       link: "/krishna-mantra"
+    },
+    {
+      name: "Tulsi Beej Mantra",
+      title: "Tulsi Beej Mantra",
+      img: "./Lord/TulsiBeejMantra.jpg",
+      subtitle: "Mantra dedicated to Goddess Tulsi",
+      link: "/tulsi-beej-mantra"
+      },
+      {
+      name: "Annapurna Beej Mantra",
+      title: "Annapurna Ma Beej Mantra",
+      img: "./Lord/AnnapurnaMaBeejMantra.jpg",
+      subtitle: "Mantra dedicated to Goddess Annapurna",
+      link: "/annapurna-ma-beej-mantra"
     },
     {
       name: "Principal Rudra",

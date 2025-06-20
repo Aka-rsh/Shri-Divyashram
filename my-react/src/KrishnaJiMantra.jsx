@@ -38,6 +38,41 @@ const KrishnaJiMantra = ({ language }) => {
 - सुबह या संध्या वेला में जप विशेष फलदायक होता है।
 `;
 
+  const englishContent = `
+🌼 Krishna Mantra Collection 🌼
+
+1. Krishna Beej Mantra:
+Om Shreem Kleem Krishnaya Namah॥
+👉 Meaning: I bow to Lord Krishna, embodiment of love, beauty, and compassion.
+👉 Use: For love, devotion, attraction, and inner harmony.
+
+2. Krishna Moola Mantra:
+Om Krishnaya Namah॥
+👉 Meaning: Salutations to Lord Krishna.
+👉 A short, simple yet powerful mantra.
+
+3. Krishna Gayatri Mantra:
+Om Devakinandanaya Vidmahe,
+Vasudevaya Dhimahi,
+Tannah Krishnah Prachodayat॥
+👉 Use: For meditation, spiritual practice, and divine knowledge.
+
+4. Radhe Krishna Mantra:
+Radhe Krishna Radhe Krishna, Krishna Krishna Radhe Radhe॥
+👉 Immerses the mind in devotion. Echoes through every lane of Vrindavan.
+
+5. Krishna Love Mantra:
+Om Namo Bhagavate Vasudevaya॥
+👉 Used for worshiping both Vishnu and Krishna.
+👉 Purpose: Peace, liberation, divine love, and life guidance.
+
+🕉 Chanting Tips:
+- Chant 108 times with Tulsi mala.
+- Light a ghee lamp in front of Krishna's image/idol.
+- Recite names like “Radhe Krishna” or “Jai Shri Krishna.”
+- Ideal time: Early morning or evening.
+`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-100 to-pink-100 text-gray-800 font-sans">
       <Navbar />
@@ -61,7 +96,7 @@ const KrishnaJiMantra = ({ language }) => {
         <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-2xl border border-purple-200
                         transform hover:scale-[1.01] transition-transform duration-300 ease-in-out animate-fade-in">
           <pre className="whitespace-pre-wrap leading-relaxed text-base sm:text-lg md:text-xl font-serif text-gray-800">
-            {isHindi ? hindiContent : "English version coming soon..."}
+            {isHindi ? hindiContent : englishContent}
           </pre>
         </div>
       </div>

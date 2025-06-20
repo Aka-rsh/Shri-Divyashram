@@ -33,6 +33,35 @@ const BrihaspatiBeejMantra = ({ language }) => {
 - जप के बाद केले या पीली मिठाई का प्रसाद चढ़ाएं।
 `;
 
+  const englishContent = `
+📿 Brihaspati (Jupiter) Mantras 📿
+
+1. Brihaspati Beej Mantra:
+Om Brim Brihaspataye Namah
+👉 Purpose: Chant this 108 times on Thursdays to strengthen Jupiter's influence and attain wisdom, prosperity, and good fortune.
+
+2. Vedic Brihaspati Mantra (from Rigveda):
+Brihaspate Ati Yadaryo Arhat Divo Vadeti
+Jyotirnah Patho Ruhet Devanam Dhurtirbhava॥
+👉 Meaning: O Brihaspati, illuminate our path and be the guide of the gods.
+
+3. Brihaspati Gayatri Mantra:
+Om Angirasa Vanshajaya Vidmahe,
+Vachaspatiye Dhimahi,
+Tanno Guruh Prachodayat॥
+👉 Meaning: We meditate on the descendant of Angiras, the master of speech, may that Guru enlighten our intellect.
+
+4. Jupiter Peace Mantra:
+Om Gram Greem Grom Sah Gurave Namah
+👉 Use: Used to pacify the negative effects of Jupiter in astrology (Jyotish Shastra).
+
+🪔 Chanting Tips:
+- Wear yellow clothes and offer yellow flowers.
+- Observe fasts and chant especially on Thursdays.
+- Use a Haldi (turmeric) or sandalwood mala.
+- Offer banana or yellow sweets as prasad after chanting.
+`;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-100 to-orange-100 text-gray-800 font-sans">
       <Navbar />
@@ -56,7 +85,7 @@ const BrihaspatiBeejMantra = ({ language }) => {
         <div className="bg-white p-6 sm:p-8 md:p-10 rounded-lg shadow-2xl border border-yellow-200
                         transform hover:scale-[1.01] transition-transform duration-300 ease-in-out animate-fade-in">
           <pre className="whitespace-pre-wrap leading-relaxed text-base sm:text-lg md:text-xl font-serif text-gray-800">
-            {isHindi ? hindiContent : "English version coming soon..."}
+            {isHindi ? hindiContent : englishContent}
           </pre>
         </div>
       </div>

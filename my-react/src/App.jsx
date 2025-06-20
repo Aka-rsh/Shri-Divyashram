@@ -59,6 +59,10 @@ import KrishnaJiMantra from "./KrishnaJiMantra";
 import PramukhRudraMantra from "./PramukhRudraMantra";
 import BrihaspatiBeejMantra from "./BrihaspatiBeejMantra";
 import DhanwantriJiMantra from "./DhanwantriJiMantra";
+import SitaBeejMantra from "./SitaBeejMantra";
+import ShriRamBeejMantra from "./ShriRamBeejMantra";
+import TulsiBeejMantra from "./TulsiBeejMantra";
+import AnnapurnaMaBeejMantra from "./AnnapurnaMaBeejMantra";
 
 
 
@@ -152,7 +156,11 @@ function App() {
           <Route path="/krishna-mantra" element={<KrishnaJiMantra language={language} />} /> 
           <Route path="/pramukh-rudra-mantra" element={<PramukhRudraMantra language={language} />} /> 
           <Route path="/brihaspati-beej-mantra" element={<BrihaspatiBeejMantra language={language} />} /> 
-          <Route path="/dhanwantri-mantra" element={<DhanwantriJiMantra language={language} />} /> 
+          <Route path="/dhanwantri-mantra" element={<DhanwantriJiMantra language={language} />} />
+          <Route path="/sita-ji-beej-mantra" element={<SitaBeejMantra language={language} />} /> 
+          <Route path="/shri-ram-ji-beej-mantra" element={<ShriRamBeejMantra language={language} />} />
+          <Route path="/tulsi-beej-mantra" element={<TulsiBeejMantra language={language} />} /> 
+          <Route path="/annapurna-ma-beej-mantra" element={<AnnapurnaMaBeejMantra language={language} />} /> 
 
           <Route path="/ContactUs" element={<ContactUs language={language} />} />
           <Route

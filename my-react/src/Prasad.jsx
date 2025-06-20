@@ -5,11 +5,11 @@ import Footer from './Footer';
 const prasadItems = [
   { en: 'Gangajal', hi: 'गंगाजल', image: './Varanasi/GangaJal.png' },
   { en: 'Rudraksh Mala', hi: 'रुद्राक्ष माला', image: './Varanasi/RudrakshaMala.jpeg' },
-  { en: 'Kashi Vishwanath Mandir Prasad', hi: 'काशी विश्वनाथ मंदिर प्रसाद', image: './Varanasi/KashivishwanathPrasad.jpeg' },
-  { en: 'Annapurna Mata Mandir Prasad', hi: 'अन्नपूर्णा माता मंदिर प्रसाद', image: './Varanasi/Annapurnamata.jpeg' },
+  { en: 'Kashi Vishwanath Mandir Prasad', hi: 'काशी विश्वनाथ मंदिर प्रसाद', image: './Varanasi/VishwanathMandir.jpeg' },
+  { en: 'Annapurna Mata Mandir Prasad', hi: 'अन्नपूर्णा माता मंदिर प्रसाद', image: './Lord/AnnapurnaMaBeejMantra.jpg' },
   { en: 'Mahadev Bhasm (Bhabhut)', hi: 'महादेव भस्म (भभूत)', image: './Varanasi/Bhasma.png' },
   { en: 'Sankat Mochan Prasad', hi: 'संकट मोचन प्रसाद', image: './Lord/HanumanJiAarti.jpg' },
-  { en: 'Kal Bhairav Prasad + Ganda', hi: 'काल भैरव प्रसाद + गंडा', image: './Varanasi/KalBhairavPrasadband.jpeg' },
+  { en: 'Kal Bhairav Prasad + Ganda', hi: 'काल भैरव प्रसाद + गंडा', image: './Lord/KalBhairav.jpg' },
   {
   en: 'Free Free Free – only collection and delivery charges included',
   hi: 'बिल्कुल मुफ़्त – केवल संग्रह और डिलीवरी शुल्क शामिल हैं',
